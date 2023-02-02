@@ -20,7 +20,6 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -34,8 +33,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
-    </DD_Value_Domain>
+     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
     <name>observation_complete</name>
@@ -47,8 +45,7 @@
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -118,7 +115,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -127,12 +124,11 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.mid_sclk_string</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The middle time of the observation in Lucy spacecraft clock string partition/SSSSSSSSSS-PPPPP.
+    <definition>The middle time of the observation in Lucy spacecraft clock string partition/SSSSSSSSSS-PPPPP, where S is seconds and P are ticks in units of 1/66535 of a second.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -145,7 +141,6 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_DOY_UTC</value_data_type>
-      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -396,6 +391,18 @@
     <definition>The name of the possible target in FOV (SPICE-derived).</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>internal_product_version_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.Lucy_Product_Information.internal_product_version_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>M. Katherine Crombie</submitter_name>
+    <definition>The Lucy pipeline internal data processing version number. This number is likely to be grater than the PDS version number given in the version_id attribute in the Observation_Area.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -571,6 +578,20 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>*</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Lucy_Product_Information</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.Lucy_Product_Information</local_identifier>
+    <submitter_name>M. Katherine Crombie</submitter_name>
+    <definition>The Lucy Mission class that contains attributes specific to the labeled data product.</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>lucy.Lucy_Product_Information.internal_product_version_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
 </Ingest_LDD>
