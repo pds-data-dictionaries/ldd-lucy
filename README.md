@@ -7,14 +7,13 @@
    potentially mysterious cases.
 -->
 
-# Lucy mission (lucy:) Local Dictionary
+# *Lucy* mission (lucy:) Local Dictionary
 <!-- EXAMPLES
    Spectral (sp:) Discipline Dictionary
    DART Mission (dart:) Local Dictionary
 -->
 
-The Lucy mission dictionary provides classes and attributes for
-describing [*Lucy*](http://lucy.swri.edu/) data products and associated information in PDS4.
+The *Lucy* mission dictionary is used to describe and enumerate [*Lucy*](http://lucy.swri.edu/) mission-specific classes and attributes. It also includes *Lucy* instrumentation-specific classes and attributes.
 
 ### Steward
 M. Katherine Crombie ([@katecrombie](https://github.com/katecrombie))
