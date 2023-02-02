@@ -13,7 +13,7 @@
    DART Mission (dart:) Local Dictionary
 -->
 
-The *Lucy* mission dictionary is used to describe and enumerate [*Lucy*](http://lucy.swri.edu/) mission-specific classes and attributes. It also includes *Lucy* instrumentation-specific classes and attributes.
+The *Lucy* mission dictionary describes and enumerates [*Lucy*](http://lucy.swri.edu/) mission- and instrumentation-specific classes and attributes.
 
 ### Steward
 M. Katherine Crombie ([@katecrombie](https://github.com/katecrombie))
