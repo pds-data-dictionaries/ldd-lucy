@@ -124,7 +124,7 @@ See the [tutorial on updating and building an IngestLDD](https://pds-data-dictio
 Each build is auto-generated using Github Actions, PDS4 LDDTool, and Validate Tool.
 
 You can also download the *IngestLDD* file and build the dictionary locally.
-You will need to install *[LDDTool]* (https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html) on your system. Once you do,
+You will need to install [*LDDTool*](https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html) on your system. Once you do,
 you can manually run [LDDTool](https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html) on the IngestLDD using the following command:
 
 ```
