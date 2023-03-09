@@ -208,6 +208,10 @@
         <value>Cruise_1</value>
         <value_meaning>The Cruise_1 Lucy Mission segment from date XXXX to date XXX.</value_meaning>
       </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>EGA_1</value>
+        <value_meaning>The EGA_1 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -533,6 +537,10 @@
         <value_menaing>CDS is not used in the current LEISA observation (TBR)</value_menaing>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
+        <value>LEISA_CDS</value>
+        <value_menaing>LIESA CDS mode is selected for the current observation (TBR)</value_menaing>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
         <value>MVIC</value>
         <value_menaing>MVIC is selected for the current observation (TBR)</value_menaing>
       </DD_Permissible_Value>
@@ -736,11 +744,11 @@
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
-        <value>EM_1</value>
+        <value>EM 1</value>
         <value_menaing>Engineering Model 1.</value_menaing>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>EM_2</value>
+        <value>EM 2</value>
         <value_menaing>Engineering Model 2</value_menaing>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -995,7 +1003,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <value_data_type>Units_of_Temperature</value_data_type>
+      <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1008,7 +1016,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <value_data_type>Units_of_Time</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1021,7 +1029,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
-      <value_data_type>Units_of_Time</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -1047,7 +1055,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <value_data_type>Units_of_Time</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1059,8 +1067,8 @@
     <definition>LEISA observation integration time (TBR)</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <value_data_type>Units_of_Time</value_data_type>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1132,7 +1140,7 @@
     <definition>LEISA FPE IR Temperature (TBR)</definition>
     <DD_Value_Domain>
       <value_data_type>ASCII_Real</value_data_type>
-      <value_data_type>Units_of_Temperature</value_data_type>
+      <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute> 
   <DD_Class>
