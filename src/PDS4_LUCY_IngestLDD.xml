@@ -1139,6 +1139,7 @@
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>LEISA FPE IR Temperature (TBR)</definition>
     <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
