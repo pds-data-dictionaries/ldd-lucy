@@ -534,19 +534,19 @@
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>LEISA_NONCDS</value>
-        <value_menaing>CDS is not used in the current LEISA observation (TBR)</value_menaing>
+        <value_meaning>CDS is not used in the current LEISA observation (TBR)</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>LEISA_CDS</value>
-        <value_menaing>LIESA CDS mode is selected for the current observation (TBR)</value_menaing>
+        <value_meaning>LIESA CDS mode is selected for the current observation (TBR)</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>MVIC</value>
-        <value_menaing>MVIC is selected for the current observation (TBR)</value_menaing>
+        <value_meaning>MVIC is selected for the current observation (TBR)</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>OTHER</value>
-        <value_menaing>Other values to be filled in. This is a placeholder.(TBR)</value_menaing>
+        <value_meaning>Other values to be filled in. This is a placeholder.(TBR)</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -656,7 +656,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <unit_of_measure_type>Units_of_Rates</unit_of_measure_type>
+      <unit_of_measure_type>Units_of_Angular_Velocity</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -698,9 +698,9 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>lr_acquisition_start_black</name>
+    <name>lr_acquisition_start_block</name>
     <version_id>1.0</version_id>
-    <local_identifier>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_black</local_identifier>
+    <local_identifier>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_block</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>The Lralph observation acquisition start block address.</definition>
@@ -745,23 +745,23 @@
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>EM 1</value>
-        <value_menaing>Engineering Model 1.</value_menaing>
+        <value_meaning>Engineering Model 1.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>EM 2</value>
-        <value_menaing>Engineering Model 2</value_menaing>
+        <value_meaning>Engineering Model 2</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>ETU</value>
-        <value_menaing>Engineering Test Unit</value_menaing>
+        <value_meaning>Engineering Test Unit</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>FM 1</value>
-        <value_menaing>Flight Model 1</value_menaing>
+        <value_meaning>Flight Model 1</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>FM 2</value>
-        <value_menaing>Flight Model 2</value_menaing>
+        <value_meaning>Flight Model 2</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -1139,6 +1139,7 @@
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>LEISA FPE IR Temperature (TBR)</definition>
     <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
       <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
@@ -1479,7 +1480,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_black</identifier_reference>
+      <identifier_reference>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_block</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
