@@ -534,19 +534,19 @@
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>LEISA_NONCDS</value>
-        <value_menaing>CDS is not used in the current LEISA observation (TBR)</value_menaing>
+        <value_meaning>CDS is not used in the current LEISA observation (TBR)</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>LEISA_CDS</value>
-        <value_menaing>LIESA CDS mode is selected for the current observation (TBR)</value_menaing>
+        <value_meaning>LIESA CDS mode is selected for the current observation (TBR)</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>MVIC</value>
-        <value_menaing>MVIC is selected for the current observation (TBR)</value_menaing>
+        <value_meaning>MVIC is selected for the current observation (TBR)</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>OTHER</value>
-        <value_menaing>Other values to be filled in. This is a placeholder.(TBR)</value_menaing>
+        <value_meaning>Other values to be filled in. This is a placeholder.(TBR)</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -745,23 +745,23 @@
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>EM 1</value>
-        <value_menaing>Engineering Model 1.</value_menaing>
+        <value_meaning>Engineering Model 1.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>EM 2</value>
-        <value_menaing>Engineering Model 2</value_menaing>
+        <value_meaning>Engineering Model 2</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>ETU</value>
-        <value_menaing>Engineering Test Unit</value_menaing>
+        <value_meaning>Engineering Test Unit</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>FM 1</value>
-        <value_menaing>Flight Model 1</value_menaing>
+        <value_meaning>Flight Model 1</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>FM 2</value>
-        <value_menaing>Flight Model 2</value_menaing>
+        <value_meaning>Flight Model 2</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
