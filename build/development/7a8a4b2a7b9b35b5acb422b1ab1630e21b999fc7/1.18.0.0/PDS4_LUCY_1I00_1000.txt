@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Mar 29 21:39:22 UTC 2023
+   Time                   Thu Mar 30 18:06:37 UTC 2023
    Common Schema          [PDS4_PDS_1I00.xsd]
    Common Schematron      [PDS4_PDS_1I00.sch]
    IM Version Id:         1.18.0.0
@@ -279,7 +279,7 @@ Parsed Input - Attributes:
    version                1.18
    value data type        ASCII_Integer
    description            The MCE scan rate (TBR).
-   unit of measure type   Units_of_Rates
+   unit of measure type   Units_of_Angular_Velocity
 
    name                   first_packet_timestamp
    version                1.18

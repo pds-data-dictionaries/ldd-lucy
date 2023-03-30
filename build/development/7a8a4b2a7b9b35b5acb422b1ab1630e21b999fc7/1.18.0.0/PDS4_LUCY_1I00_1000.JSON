@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2023-03-29T14:39:22" ,
+      "Date": "2023-03-30T11:06:37" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "lucy:"] ,
       "classDictionary": [
@@ -1843,31 +1843,31 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "EM 1" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Engineering Model 1." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "EM 2" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Engineering Model 2" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "ETU" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Engineering Test Unit" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "FM 1" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Flight Model 1" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "FM 2" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Flight Model 2" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2143,9 +2143,9 @@
             "minimumValue": "-9223372036854775808" ,
             "maximumValue": "9223372036854775807" ,
             "pattern": "null" ,
-            "unitOfMeasure": "Units_of_Rates" ,
-            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Rates" ,
-            "unitId": "counts\/bin, kilobits\/s" ,
+            "unitOfMeasure": "Units_of_Angular_Velocity" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Angular_Velocity" ,
+            "unitId": "deg\/day, deg\/s, rad\/s" ,
             "defaultUnitId": "null"
           }
         }
@@ -2250,25 +2250,25 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "LEISA_CDS" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "LIESA CDS mode is selected for the current observation (TBR)" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "LEISA_NONCDS" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "CDS is not used in the current LEISA observation (TBR)" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "MVIC" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "MVIC is selected for the current observation (TBR)" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "OTHER" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Other values to be filled in. This is a placeholder.(TBR)" ,
                   "isDeprecated": "false"
                 }
              }
