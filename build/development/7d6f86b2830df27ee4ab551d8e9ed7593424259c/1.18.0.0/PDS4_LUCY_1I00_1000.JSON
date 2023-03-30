@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2023-03-30T11:06:37" ,
+      "Date": "2023-03-30T18:37:32Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "lucy:"] ,
       "classDictionary": [
@@ -547,8 +547,8 @@
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_black" ,
-                "title": "lr_acquisition_start_black" ,
+                "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_block" ,
+                "title": "lr_acquisition_start_block" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -558,7 +558,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1190" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_black"
+                  "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_block"
                  ]
               }
             }
@@ -2001,8 +2001,8 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_black" ,
-            "title": "lr_acquisition_start_black" ,
+            "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_block" ,
+            "title": "lr_acquisition_start_block" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
