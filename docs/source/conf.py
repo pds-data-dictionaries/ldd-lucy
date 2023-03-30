@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Example Namespace'
+project = 'Lucy Mission LDD'
 # copyright = overidden by CSS specified below
-author = 'NASA Planetary Data System'
+author = 'Lucy Archive Team'
 
 
 # -- General configuration ---------------------------------------------------
