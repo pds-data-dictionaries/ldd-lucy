@@ -698,9 +698,9 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>lr_acquisition_start_black</name>
+    <name>lr_acquisition_start_block</name>
     <version_id>1.0</version_id>
-    <local_identifier>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_black</local_identifier>
+    <local_identifier>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_block</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>The Lralph observation acquisition start block address.</definition>
@@ -1480,7 +1480,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_black</identifier_reference>
+      <identifier_reference>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_block</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
