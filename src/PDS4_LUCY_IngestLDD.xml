@@ -656,7 +656,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <unit_of_measure_type>Units_of_Rates</unit_of_measure_type>
+      <unit_of_measure_type>Units_of_Angular_Velocity</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
