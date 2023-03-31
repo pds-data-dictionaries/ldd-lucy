@@ -68,7 +68,7 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.start_sclk</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The Lucy spacecraft SCLK time (in seconds) at the start of the observation.
+    <definition>The Lucy spacecraft clock (SCLK) time (in seconds) at the start of the observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -82,7 +82,7 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.mid_sclk</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The Lucy spacecraft SCLK time (in seconds) at the mid-time of the observation.
+    <definition>The Lucy spacecraft clock (SCLK) time (in seconds) at the mid-time of the observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -96,7 +96,7 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.stop_sclk</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The Lucy spacecraft SCLK time (in seconds) at the end of the observation.
+    <definition>The Lucy spacecraft clock (SCLK) time (in seconds) at the end of the observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -433,6 +433,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>0x[0-9A-Fa-f]{8}</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
