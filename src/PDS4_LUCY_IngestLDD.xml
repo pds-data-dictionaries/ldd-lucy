@@ -1309,7 +1309,7 @@
     <DD_Association>
       <identifier_reference>lucy.Lucy_Target_List.target_fov_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>*</maximum_occurrences>
     </DD_Association>
   </DD_Class>
