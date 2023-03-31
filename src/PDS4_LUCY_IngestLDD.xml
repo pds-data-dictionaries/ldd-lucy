@@ -68,7 +68,7 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.start_sclk</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The start time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1/65535 of a second.
+    <definition>The Lucy spacecraft SCLK time (in seconds) at the start of the observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -82,7 +82,7 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.mid_sclk</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The middle time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1/65535 of a second.
+    <definition>The Lucy spacecraft SCLK time (in seconds) at the mid-time of the observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -96,7 +96,7 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.stop_sclk</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The end time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1/65535 of a second.
+    <definition>The Lucy spacecraft SCLK time (in seconds) at the end of the observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -233,7 +233,7 @@
     <local_identifier>lucy.Lucy_Observation_Planning.visit_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The Lucy Mission trojan asteroid visti name.</definition>
+    <definition>The Lucy Mission trojan asteroid visit name.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
