@@ -129,6 +129,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>\d/\d{10}-\d{5}</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
