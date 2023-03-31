@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Mar 31 19:01:56 UTC 2023
+   Time                   Fri Mar 31 22:44:15 UTC 2023
    Common Schema          [PDS4_PDS_1I00.xsd]
    Common Schematron      [PDS4_PDS_1I00.sch]
    IM Version Id:         1.18.0.0
@@ -73,19 +73,19 @@ Parsed Input - Attributes:
    name                   start_sclk
    version                1.18
    value data type        ASCII_Real
-   description            The Lucy spacecraft SCLK time (in seconds) at the start of the observation. 
+   description            The Lucy spacecraft clock (SCLK) time (in seconds) at the start of the observation. 
    unit of measure type   Units_of_Time
 
    name                   mid_sclk
    version                1.18
    value data type        ASCII_Real
-   description            The Lucy spacecraft SCLK time (in seconds) at the mid-time of the observation. 
+   description            The Lucy spacecraft clock (SCLK) time (in seconds) at the mid-time of the observation. 
    unit of measure type   Units_of_Time
 
    name                   stop_sclk
    version                1.18
    value data type        ASCII_Real
-   description            The Lucy spacecraft SCLK time (in seconds) at the end of the observation. 
+   description            The Lucy spacecraft clock (SCLK) time (in seconds) at the end of the observation. 
    unit of measure type   Units_of_Time
 
    name                   mid_utc
