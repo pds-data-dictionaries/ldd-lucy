@@ -225,7 +225,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>SAP\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.(s(1|2)\.)?v\d{2}__[\w\d]{1,22}</pattern>
+      <pattern>SAP\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.(s(1|2)\.)?v\d{2}__[\w_]{1,22}</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -238,7 +238,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>\d{5}\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.v\d{2}\.\d{3}\w{2}__[\w\d]{1,22}</pattern>
+      <pattern>\d{5}\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.v\d{2}\.\d{3}\w{2}__[\w_]{1,22}</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
