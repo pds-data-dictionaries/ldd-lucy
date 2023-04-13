@@ -206,12 +206,12 @@
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
-        <value>CRUISE 1</value>
-        <value_meaning>The Cruise 1 Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+        <value>Cruise_1</value>
+        <value_meaning>The Cruise_1 Lucy Mission segment from date XXXX to date XXX.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>EGA 1</value>
-        <value_meaning>The EGA 1 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+        <value>EGA_1</value>
+        <value_meaning>The EGA_1 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -225,7 +225,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>SAP\.(RA|MV|LE|LO|TE|TT)\.(C|E|N)\.\d{3}\.(s(1|2)\.)?v\d{2}__[\w_]{1,22}</pattern>
+      <pattern>SAP\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.(s(1|2)\.)?v\d{2}__[\w_]{1,22}</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -238,7 +238,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>\d{5}\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\.(RA|MV|LE|LO|TE|TT)\.(C|E|N)\.\d{3}\.v\d{2}\.\d{3}\w{2}__[\w_]{1,22}</pattern>
+      <pattern>\d{5}\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.v\d{2}\.\d{3}\w{2}__[\w_]{1,22}</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -748,11 +748,11 @@
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
-        <value>EM1</value>
+        <value>EM 1</value>
         <value_meaning>Engineering Model 1.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>EM2</value>
+        <value>EM 2</value>
         <value_meaning>Engineering Model 2</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -760,11 +760,11 @@
         <value_meaning>Engineering Test Unit</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>FM1</value>
+        <value>FM 1</value>
         <value_meaning>Flight Model 1</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>FM2</value>
+        <value>FM 2</value>
         <value_meaning>Flight Model 2</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
