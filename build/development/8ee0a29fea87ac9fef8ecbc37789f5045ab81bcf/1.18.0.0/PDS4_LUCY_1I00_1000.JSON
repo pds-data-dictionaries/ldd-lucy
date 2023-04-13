@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2023-04-07T18:27:36Z" ,
+      "Date": "2023-04-13T19:41:47Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "lucy:"] ,
       "classDictionary": [
@@ -1842,13 +1842,13 @@
             "defaultUnitId": "null"
           , "PermissibleValueList": [
               {"PermissibleValue": {
-                  "value": "EM 1" ,
+                  "value": "EM1" ,
                   "valueMeaning": "Engineering Model 1." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
-                  "value": "EM 2" ,
+                  "value": "EM2" ,
                   "valueMeaning": "Engineering Model 2" ,
                   "isDeprecated": "false"
                 }
@@ -1860,13 +1860,13 @@
                 }
              }
             , {"PermissibleValue": {
-                  "value": "FM 1" ,
+                  "value": "FM1" ,
                   "valueMeaning": "Flight Model 1" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
-                  "value": "FM 2" ,
+                  "value": "FM2" ,
                   "valueMeaning": "Flight Model 2" ,
                   "isDeprecated": "false"
                 }
@@ -2648,14 +2648,14 @@
             "defaultUnitId": "null"
           , "PermissibleValueList": [
               {"PermissibleValue": {
-                  "value": "Cruise_1" ,
-                  "valueMeaning": "The Cruise_1 Lucy Mission segment from date XXXX to date XXX." ,
+                  "value": "CRUISE 1" ,
+                  "valueMeaning": "The Cruise 1 Lucy Mission segment from date XXXX to date XXX." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
-                  "value": "EGA_1" ,
-                  "valueMeaning": "The EGA_1 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX." ,
+                  "value": "EGA 1" ,
+                  "valueMeaning": "The EGA 1 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX." ,
                   "isDeprecated": "false"
                 }
              }
@@ -2680,7 +2680,7 @@
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "SAP\\.(RA|MV|LE|LO|TE)\\.(C|E|N)\\.\\d{3}\\.(s(1|2)\\.)?v\\d{2}__[\\w_]{1,22}" ,
+            "pattern": "SAP\\.(RA|MV|LE|LO|TE|TT)\\.(C|E|N)\\.\\d{3}\\.(s(1|2)\\.)?v\\d{2}__[\\w_]{1,22}" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -2756,7 +2756,7 @@
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "\\d{5}\\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\\.(RA|MV|LE|LO|TE)\\.(C|E|N)\\.\\d{3}\\.v\\d{2}\\.\\d{3}\\w{2}__[\\w_]{1,22}" ,
+            "pattern": "\\d{5}\\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\\.(RA|MV|LE|LO|TE|TT)\\.(C|E|N)\\.\\d{3}\\.v\\d{2}\\.\\d{3}\\w{2}__[\\w_]{1,22}" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,

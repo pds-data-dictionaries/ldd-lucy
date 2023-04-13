@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Fri Apr 07 18:27:36 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Thu Apr 13 19:41:47 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -71,9 +71,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection">
-      <sch:assert test=". = ('EM 1', 'EM 2', 'ETU', 'FM 1', 'FM 2')">
+      <sch:assert test=". = ('EM1', 'EM2', 'ETU', 'FM1', 'FM2')">
         <title>lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection/lucy:board_selection</title>
-        The attribute lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection must be equal to one of the following values 'EM 1', 'EM 2', 'ETU', 'FM 1', 'FM 2'.</sch:assert>
+        The attribute lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection must be equal to one of the following values 'EM1', 'EM2', 'ETU', 'FM1', 'FM2'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -148,9 +148,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:Lucy_Observation_Planning/lucy:mission_segment">
-      <sch:assert test=". = ('Cruise_1', 'EGA_1')">
+      <sch:assert test=". = ('CRUISE 1', 'EGA 1')">
         <title>lucy:Lucy_Observation_Planning/lucy:mission_segment/lucy:mission_segment</title>
-        The attribute lucy:Lucy_Observation_Planning/lucy:mission_segment must be equal to one of the following values 'Cruise_1', 'EGA_1'.</sch:assert>
+        The attribute lucy:Lucy_Observation_Planning/lucy:mission_segment must be equal to one of the following values 'CRUISE 1', 'EGA 1'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Fri Apr 07 18:27:36 UTC 2023 -->
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Thu Apr 13 19:41:47 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -98,7 +98,7 @@ _TBD_Ingest_LDD
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="lucy:playback_header_type = ('LEISA_CDS', 'LEISA_NONCDS', 'MVIC', 'OTHER')"/> -->
-    <!-- <xs:assert test="lucy:board_selection = ('EM 1', 'EM 2', 'ETU', 'FM 1', 'FM 2')"/> -->
+    <!-- <xs:assert test="lucy:board_selection = ('EM1', 'EM2', 'ETU', 'FM1', 'FM2')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
 
@@ -121,7 +121,7 @@ _TBD_Ingest_LDD
       <xs:element name="ttcam_status" type="lucy:ttcam_status" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
-    <!-- <xs:assert test="lucy:mission_segment = ('Cruise_1', 'EGA_1')"/> -->
+    <!-- <xs:assert test="lucy:mission_segment = ('CRUISE 1', 'EGA 1')"/> -->
     <!-- <xs:assert test="lucy:instrument_side = ('N/A', 'SIDE_1', 'SIDE_2')"/> -->
     <!-- <xs:assert test="lucy:llorri_status = ('ACTIVE', 'POWERED', 'UNKNOWN', 'UNPOWERED')"/> -->
     <!-- <xs:assert test="lucy:lralph_status = ('ACTIVE', 'POWERED', 'UNKNOWN', 'UNPOWERED')"/> -->
@@ -1132,7 +1132,7 @@ _TBD_Ingest_LDD
         identifier.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='SAP\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.(s(1|2)\.)?v\d{2}__[\w_]{1,22}'/>
+    	<xs:pattern value='SAP\.(RA|MV|LE|LO|TE|TT)\.(C|E|N)\.\d{3}\.(s(1|2)\.)?v\d{2}__[\w_]{1,22}'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
@@ -1235,7 +1235,7 @@ _TBD_Ingest_LDD
         name.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='\d{5}\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\.(RA|MV|LE|LO|TE)\.(C|E|N)\.\d{3}\.v\d{2}\.\d{3}\w{2}__[\w_]{1,22}'/>
+    	<xs:pattern value='\d{5}\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\.(RA|MV|LE|LO|TE|TT)\.(C|E|N)\.\d{3}\.v\d{2}\.\d{3}\w{2}__[\w_]{1,22}'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
