@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2023-04-13T19:46:25Z" ,
+      "Date": "2023-05-12T23:12:40Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "lucy:"] ,
       "classDictionary": [
@@ -2635,8 +2635,8 @@
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "dataType": "ASCII_Short_String_Preserved" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
             "minimumCharacters": "1" ,
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
@@ -2946,12 +2946,12 @@
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
-            "description": "The Lucy Mission observation is complete. " ,
+            "description": "The Lucy Mission observation completion status. " ,
             "isNillable": "false" ,
-            "isEnumerated": "false" ,
+            "isEnumerated": "true" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Preserved" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Preserved" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
             "minimumCharacters": "1" ,
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
@@ -2961,6 +2961,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "COMPLETE" ,
+                  "valueMeaning": "The observation is complete as planned." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "INCOMPLETE" ,
+                  "valueMeaning": "The as-planned observation is incomplete." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "UNKNOWN" ,
+                  "valueMeaning": "Available information is insufficient to determine completion status." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -2996,7 +3016,7 @@
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
-            "description": "The Lucy Mission observation identifier counter. This number increments by 1 with each planned observation sequence. " ,
+            "description": "The Lucy Mission observation identifier counter. This number increments by 1 with each planned observation sequence (L'LORRI only). " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
