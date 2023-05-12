@@ -28,7 +28,7 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.observation_id_count</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The Lucy Mission observation identifier counter. This number increments by 1 with each planned observation sequence.
+    <definition>The Lucy Mission observation identifier counter. This number increments by 1 with each planned observation sequence (L'LORRI only).
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -41,11 +41,23 @@
     <local_identifier>lucy.Lucy_Observation_Time_Information.observation_complete</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The Lucy Mission observation is complete.
+    <definition>The Lucy Mission observation completion status.
     </definition>
     <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>COMPLETE</value>
+        <value_meaning>The observation is complete as planned.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>INCOMPLETE</value>
+        <value_meaning>The as-planned observation is incomplete.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>UNKNOWN</value>
+        <value_meaning>Available information is insufficient to determine completion status.</value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -204,7 +216,7 @@
     <definition>The Lucy Mission segment</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <value_data_type>ASCII_Short_String_Preserved</value_data_type>
       <DD_Permissible_Value>
         <value>CRUISE 1</value>
         <value_meaning>The Cruise 1 Lucy Mission segment from date XXXX to date XXX.</value_meaning>
