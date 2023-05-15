@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2023-03-29T14:39:22" ,
+      "Date": "2023-04-07T18:27:36Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "lucy:"] ,
       "classDictionary": [
@@ -547,8 +547,8 @@
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_black" ,
-                "title": "lr_acquisition_start_black" ,
+                "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_block" ,
+                "title": "lr_acquisition_start_block" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -558,7 +558,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1190" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_black"
+                  "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_block"
                  ]
               }
             }
@@ -1078,7 +1078,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "*" ,
                 "classOrder": "1020" ,
                 "attributeId": [
@@ -1710,7 +1710,7 @@
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
+            "pattern": "0x[0-9A-Fa-f]{8}" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -1843,31 +1843,31 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "EM 1" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Engineering Model 1." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "EM 2" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Engineering Model 2" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "ETU" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Engineering Test Unit" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "FM 1" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Flight Model 1" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "FM 2" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Flight Model 2" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2001,8 +2001,8 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_black" ,
-            "title": "lr_acquisition_start_black" ,
+            "identifier": "0001_NASA_PDS_1.lucy.LRalph_Instrument_Common_Parameters.lucy.lr_acquisition_start_block" ,
+            "title": "lr_acquisition_start_block" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
@@ -2136,16 +2136,16 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "-9223372036854775808" ,
-            "maximumValue": "9223372036854775807" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
-            "unitOfMeasure": "Units_of_Rates" ,
-            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Rates" ,
-            "unitId": "counts\/bin, kilobits\/s" ,
+            "unitOfMeasure": "Units_of_Angular_Velocity" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Angular_Velocity" ,
+            "unitId": "deg\/day, deg\/s, rad\/s" ,
             "defaultUnitId": "null"
           }
         }
@@ -2250,25 +2250,25 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "LEISA_CDS" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "LIESA CDS mode is selected for the current observation (TBR)" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "LEISA_NONCDS" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "CDS is not used in the current LEISA observation (TBR)" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "MVIC" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "MVIC is selected for the current observation (TBR)" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "OTHER" ,
-                  "valueMeaning": "null" ,
+                  "valueMeaning": "Other values to be filled in. This is a placeholder.(TBR)" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2680,7 +2680,7 @@
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
+            "pattern": "SAP\\.(RA|MV|LE|LO|TE)\\.(C|E|N)\\.\\d{3}\\.(s(1|2)\\.)?v\\d{2}__[\\w_]{1,22}" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -2746,7 +2746,7 @@
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
-            "description": "The Lucy Mission trojan asteroid visti name." ,
+            "description": "The Lucy Mission trojan asteroid visit name." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2756,7 +2756,7 @@
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
+            "pattern": "\\d{5}\\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\\.(RA|MV|LE|LO|TE)\\.(C|E|N)\\.\\d{3}\\.v\\d{2}\\.\\d{3}\\w{2}__[\\w_]{1,22}" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -2821,7 +2821,7 @@
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
-            "description": "The middle time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1\/65535 of a second. " ,
+            "description": "The Lucy spacecraft clock (SCLK) time (in seconds) at the mid-time of the observation. " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2856,7 +2856,7 @@
             "maximumCharacters": "255" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
+            "pattern": "\\d\/\\d{10}-\\d{5}" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -3046,7 +3046,7 @@
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
-            "description": "The start time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1\/65535 of a second. " ,
+            "description": "The Lucy spacecraft clock (SCLK) time (in seconds) at the start of the observation. " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -3071,7 +3071,7 @@
             "nameSpaceId": "lucy" ,
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
-            "description": "The end time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1\/65535 of a second. " ,
+            "description": "The Lucy spacecraft clock (SCLK) time (in seconds) at the end of the observation. " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Wed Mar 29 21:39:22 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Fri Apr 07 18:27:36 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -92,9 +92,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LRalph_Instrument_Common_Parameters/lucy:mce_scan_rate">
-      <sch:assert test="@unit = ('counts/bin', 'kilobits/s')">
+      <sch:assert test="@unit = ('deg/day', 'deg/s', 'rad/s')">
         <title>lucy:LRalph_Instrument_Common_Parameters/lucy:mce_scan_rate/lucy:mce_scan_rate</title>
-        The attribute @unit must be equal to one of the following values 'counts/bin', 'kilobits/s'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'deg/day', 'deg/s', 'rad/s'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
