@@ -1269,13 +1269,13 @@
       <identifier_reference>lucy.Lucy_Observation_Planning.sap_identifier</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>lucy.Lucy_Observation_Planning.visit_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>lucy.Lucy_Observation_Planning.instrument_side</identifier_reference>
