@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri May 12 23:12:40 UTC 2023
+   Time                   Thu Jun 08 21:23:13 UTC 2023
    Common Schema          [PDS4_PDS_1I00.xsd]
    Common Schematron      [PDS4_PDS_1I00.sch]
    IM Version Id:         1.18.0.0
@@ -574,12 +574,12 @@ Parsed Input - Classes:
 
       local identifier      lucy.Lucy_Observation_Planning.sap_identifier
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   *
       reference type        attribute_of
 
       local identifier      lucy.Lucy_Observation_Planning.visit_name
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   *
       reference type        attribute_of
 
       local identifier      lucy.Lucy_Observation_Planning.instrument_side

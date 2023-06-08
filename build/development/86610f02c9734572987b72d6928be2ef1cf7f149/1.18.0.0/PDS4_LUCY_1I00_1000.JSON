@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2023-05-12T23:12:40Z" ,
+      "Date": "2023-06-08T21:23:14Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "lucy:"] ,
       "classDictionary": [
@@ -682,7 +682,7 @@
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
-                "maximumCardinality": "1" ,
+                "maximumCardinality": "*" ,
                 "classOrder": "1030" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.lucy.Lucy_Observation_Planning.lucy.sap_identifier"
@@ -698,7 +698,7 @@
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
-                "maximumCardinality": "1" ,
+                "maximumCardinality": "*" ,
                 "classOrder": "1040" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.lucy.Lucy_Observation_Planning.lucy.visit_name"
