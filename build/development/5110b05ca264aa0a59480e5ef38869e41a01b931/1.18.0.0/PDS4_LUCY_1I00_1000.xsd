@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Thu Jun 08 21:23:13 UTC 2023 -->
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Tue Jun 27 17:19:01 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -407,7 +407,7 @@ _TBD_Ingest_LDD
         (TBR).</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
+     <xs:minInclusive value="0"/>
      <xs:maxInclusive value="9223372036854775807"/>
 	   </xs:restriction>
   </xs:simpleType>
@@ -480,7 +480,7 @@ _TBD_Ingest_LDD
         occurred.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
+     <xs:minInclusive value="0"/>
      <xs:maxInclusive value="9223372036854775807"/>
 	   </xs:restriction>
   </xs:simpleType>
@@ -549,9 +549,7 @@ _TBD_Ingest_LDD
       <xs:documentation>LEISA observation mode, T is CDS, F is NONCDS.
         (TBR)</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
+    <xs:restriction base="pds:ASCII_Boolean">
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -621,9 +619,9 @@ _TBD_Ingest_LDD
       <xs:documentation>The command sequence load
         identifier</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
+    <xs:restriction base="pds:ASCII_Integer">
+     <xs:minInclusive value="21289"/>
+     <xs:maxInclusive value="99999"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -803,16 +801,16 @@ _TBD_Ingest_LDD
   </xs:simpleType>
 
   <xs:simpleType name="mid_utc_jd_WO_Units">
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="mid_utc_jd">
     <xs:annotation>
       <xs:documentation>The middle time of the observation in Julian day
-        format,</xs:documentation>
+        format.</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="lucy:mid_utc_jd_WO_Units">
@@ -968,8 +966,8 @@ _TBD_Ingest_LDD
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
-     <xs:maxInclusive value="9223372036854775807"/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="99999"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -980,8 +978,8 @@ _TBD_Ingest_LDD
         sequence (L'LORRI only). </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
-     <xs:maxInclusive value="9223372036854775807"/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="99999"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -992,7 +990,7 @@ _TBD_Ingest_LDD
         </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
+     <xs:minInclusive value="0"/>
      <xs:maxInclusive value="9223372036854775807"/>
 	   </xs:restriction>
   </xs:simpleType>
@@ -1216,8 +1214,8 @@ _TBD_Ingest_LDD
         science, 1 is test pattern.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
-     <xs:maxInclusive value="9223372036854775807"/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="1"/>
 	   </xs:restriction>
   </xs:simpleType>
 
