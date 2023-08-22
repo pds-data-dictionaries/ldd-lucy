@@ -54,7 +54,7 @@ are located at https://pds-data-dictionaries.github.io/ldd-lucy.
        * Review the [Change Log] (ChangeLog.md)
        * Review the [Change Log] (src/CHANGELOG.md)
 -->     
-* Download dictionary files from the [PDS Data Dictionaries Page](https://pds.nasa.gov/datastandards/dictionaries/#lucy)
+* Download dictionary files from the [PDS Mission Data Dictionaries Page](https://pds.nasa.gov/datastandards/dictionaries/index-missions.shtml#lucy)
 * On [GitHub](../../releases/latest)
 * Review the [Change log](CHANGELOG.md)
 
