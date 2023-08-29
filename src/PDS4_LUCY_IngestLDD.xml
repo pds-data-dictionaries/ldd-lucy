@@ -74,8 +74,7 @@
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>0</minimum_value>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -210,7 +209,7 @@
     <name>load_identifier</name>
     <version_id>1.0</version_id>
     <local_identifier>lucy.Lucy_Observation_Planning.load_identifier</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <nillable_flag>true</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>The command sequence load identifier</definition>
     <DD_Value_Domain>
@@ -244,7 +243,7 @@
     <name>sap_identifier</name>
     <version_id>1.0</version_id>
     <local_identifier>lucy.Lucy_Observation_Planning.sap_identifier</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <nillable_flag>true</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>The Lucy Mission science activity plan identifier.</definition>
     <DD_Value_Domain>
@@ -257,7 +256,7 @@
     <name>visit_name</name>
     <version_id>1.0</version_id>
     <local_identifier>lucy.Lucy_Observation_Planning.visit_name</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <nillable_flag>true</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>The Lucy Mission trojan asteroid visit name.</definition>
     <DD_Value_Domain>
@@ -593,7 +592,7 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
       <minimum_value>0</minimum_value>
-      <maximum_value>1</maximum_value>
+      <maximum_value>2</maximum_value>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -678,8 +677,7 @@
     <definition>Number of FPE drop frames (TBR).</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>0</minimum_value>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1193,7 +1191,7 @@
       <identifier_reference>lucy.Lucy_Observation_Time_Information.observation_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>lucy.Lucy_Observation_Time_Information.observation_id_count</identifier_reference>
@@ -1279,7 +1277,7 @@
       <identifier_reference>lucy.Lucy_Observation_Planning.load_identifier</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
+      <maximum_occurrences>*</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>lucy.Lucy_Observation_Planning.mission_segment</identifier_reference>
