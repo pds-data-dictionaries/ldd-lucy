@@ -237,6 +237,10 @@
         <value>EGA 1</value>
         <value_meaning>The EGA 1 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX.</value_meaning>
       </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>CRUISE 2</value>
+        <value_meaning>The Cruise 2 Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
