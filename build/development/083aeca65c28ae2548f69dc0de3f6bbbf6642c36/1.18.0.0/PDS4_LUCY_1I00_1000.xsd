@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Tue Jun 27 17:19:01 UTC 2023 -->
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Tue Sep 05 21:07:23 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -110,10 +110,10 @@ _TBD_Ingest_LDD
         observations.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="load_identifier" type="lucy:load_identifier" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="load_identifier" nillable="true" type="lucy:load_identifier" minOccurs="0" maxOccurs="unbounded"> </xs:element>
       <xs:element name="mission_segment" type="lucy:mission_segment" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="sap_identifier" type="lucy:sap_identifier" minOccurs="0" maxOccurs="unbounded"> </xs:element>
-      <xs:element name="visit_name" type="lucy:visit_name" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="sap_identifier" nillable="true" type="lucy:sap_identifier" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="visit_name" nillable="true" type="lucy:visit_name" minOccurs="0" maxOccurs="unbounded"> </xs:element>
       <xs:element name="instrument_side" type="lucy:instrument_side" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="llorri_status" type="lucy:llorri_status" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="lralph_status" type="lucy:lralph_status" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -121,7 +121,7 @@ _TBD_Ingest_LDD
       <xs:element name="ttcam_status" type="lucy:ttcam_status" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
-    <!-- <xs:assert test="lucy:mission_segment = ('CRUISE 1', 'EGA 1')"/> -->
+    <!-- <xs:assert test="lucy:mission_segment = ('CRUISE 1', 'CRUISE 2', 'EGA 1')"/> -->
     <!-- <xs:assert test="lucy:instrument_side = ('N/A', 'SIDE_1', 'SIDE_2')"/> -->
     <!-- <xs:assert test="lucy:llorri_status = ('ACTIVE', 'POWERED', 'UNKNOWN', 'UNPOWERED')"/> -->
     <!-- <xs:assert test="lucy:lralph_status = ('ACTIVE', 'POWERED', 'UNKNOWN', 'UNPOWERED')"/> -->
@@ -136,7 +136,7 @@ _TBD_Ingest_LDD
         timing information.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="observation_id" type="lucy:observation_id" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="observation_id" type="lucy:observation_id" minOccurs="1" maxOccurs="unbounded"> </xs:element>
       <xs:element name="observation_id_count" type="lucy:observation_id_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="observation_complete" type="lucy:observation_complete" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="observation_missing_packets" type="lucy:observation_missing_packets" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -406,9 +406,10 @@ _TBD_Ingest_LDD
       <xs:documentation>Number of FPE drop frames
         (TBR).</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
      <xs:minInclusive value="0"/>
-     <xs:maxInclusive value="9223372036854775807"/>
+     <xs:maxInclusive value="18446744073709551615"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -614,16 +615,17 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="load_identifier">
+  <xs:complexType name="load_identifier">
     <xs:annotation>
       <xs:documentation>The command sequence load
         identifier</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="21289"/>
-     <xs:maxInclusive value="99999"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="lr_acquisition_start_block">
     <xs:annotation>
@@ -989,9 +991,10 @@ _TBD_Ingest_LDD
         observation. The best data quality has no missing packets.
         </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
      <xs:minInclusive value="0"/>
-     <xs:maxInclusive value="9223372036854775807"/>
+     <xs:maxInclusive value="18446744073709551615"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -1127,17 +1130,17 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="sap_identifier">
+  <xs:complexType name="sap_identifier">
     <xs:annotation>
       <xs:documentation>The Lucy Mission science activity plan
         identifier.</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='SAP\.(RA|MV|LE|LO|TE|TT)\.(C|E|N)\.\d{3}\.(s(1|2)\.)?v\d{2}__[\w_]{1,22}'/>
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="scan_row_pixels">
     <xs:annotation>
@@ -1215,7 +1218,7 @@ _TBD_Ingest_LDD
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
      <xs:minInclusive value="0"/>
-     <xs:maxInclusive value="1"/>
+     <xs:maxInclusive value="2"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -1230,17 +1233,17 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="visit_name">
+  <xs:complexType name="visit_name">
     <xs:annotation>
       <xs:documentation>The Lucy Mission trojan asteroid visit
         name.</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='\d{5}\.(crus|ega1|dnky|ega2|donj|eury|poly|leuc|orus|ega3|pmbi)\.(RA|MV|LE|LO|TE|TT)\.(C|E|N)\.\d{3}\.v\d{2}\.\d{3}\w{2}__[\w_]{1,22}'/>
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="xsum_error_flag_status">
     <xs:annotation>

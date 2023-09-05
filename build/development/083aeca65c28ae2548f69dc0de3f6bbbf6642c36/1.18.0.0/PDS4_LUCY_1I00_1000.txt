@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Jun 27 17:19:01 UTC 2023
+   Time                   Tue Sep 05 21:07:23 UTC 2023
    Common Schema          [PDS4_PDS_1I00.xsd]
    Common Schematron      [PDS4_PDS_1I00.sch]
    IM Version Id:         1.18.0.0
@@ -71,9 +71,8 @@ Parsed Input - Attributes:
 
    name                   observation_missing_packets
    version                1.18
-   value data type        ASCII_Integer
+   value data type        ASCII_NonNegative_Integer
    description            The number of missing packets in the observation. The best data quality has no missing packets. 
-   minimum value          0
 
    name                   start_sclk
    version                1.18
@@ -130,6 +129,7 @@ Parsed Input - Attributes:
    version                1.18
    value data type        ASCII_Integer
    description            The command sequence load identifier
+   nillable               true
    minimum value          21289
    maximum value          99999
 
@@ -142,11 +142,13 @@ Parsed Input - Attributes:
    version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The Lucy Mission science activity plan identifier.
+   nillable               true
 
    name                   visit_name
    version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The Lucy Mission trojan asteroid visit name.
+   nillable               true
 
    name                   instrument_side
    version                1.18
@@ -248,7 +250,7 @@ Parsed Input - Attributes:
    value data type        ASCII_Integer
    description            The instrument test pattern setting, 0 is science, 1 is test pattern.
    minimum value          0
-   maximum value          1
+   maximum value          2
 
    name                   hs_xtrack_start_row
    version                1.18
@@ -283,9 +285,8 @@ Parsed Input - Attributes:
 
    name                   fpe_drop_frames
    version                1.18
-   value data type        ASCII_Integer
+   value data type        ASCII_NonNegative_Integer
    description            Number of FPE drop frames (TBR).
-   minimum value          0
 
    name                   mce_scan_rate
    version                1.18
@@ -503,7 +504,7 @@ Parsed Input - Classes:
 
       local identifier      lucy.Lucy_Observation_Time_Information.observation_id
       minimum occurrences   1
-      maximum occurrences   1
+      maximum occurrences   *
       reference type        attribute_of
 
       local identifier      lucy.Lucy_Observation_Time_Information.observation_id_count
@@ -576,7 +577,7 @@ Parsed Input - Classes:
 
       local identifier      lucy.Lucy_Observation_Planning.load_identifier
       minimum occurrences   0
-      maximum occurrences   1
+      maximum occurrences   *
       reference type        attribute_of
 
       local identifier      lucy.Lucy_Observation_Planning.mission_segment

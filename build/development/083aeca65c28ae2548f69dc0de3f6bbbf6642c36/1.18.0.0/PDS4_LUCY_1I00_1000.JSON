@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.18.0.0" ,
       "LDD Version": "1.0.0.0" ,
-      "Date": "2023-06-27T17:19:01Z" ,
+      "Date": "2023-09-05T21:07:23Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "lucy:"] ,
       "classDictionary": [
@@ -650,7 +650,7 @@
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
-                "maximumCardinality": "1" ,
+                "maximumCardinality": "*" ,
                 "classOrder": "1010" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.lucy.Lucy_Observation_Planning.lucy.load_identifier"
@@ -809,7 +809,7 @@
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
+                "maximumCardinality": "*" ,
                 "classOrder": "1010" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.lucy.Lucy_Observation_Time_Information.lucy.observation_id"
@@ -1911,13 +1911,13 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "dataType": "ASCII_NonNegative_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_NonNegative_Integer" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
             "minimumValue": "0" ,
-            "maximumValue": "9223372036854775807" ,
-            "pattern": "null" ,
+            "maximumValue": "18446744073709551615" ,
+            "pattern": "[0-9]+" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -2367,7 +2367,7 @@
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
             "minimumValue": "0" ,
-            "maximumValue": "1" ,
+            "maximumValue": "2" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
@@ -2505,7 +2505,7 @@
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
             "description": "The command sequence load identifier" ,
-            "isNillable": "false" ,
+            "isNillable": "true" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
             "dataType": "ASCII_Integer" ,
@@ -2654,6 +2654,12 @@
                 }
              }
             , {"PermissibleValue": {
+                  "value": "CRUISE 2" ,
+                  "valueMeaning": "The Cruise 2 Lucy Mission segment from date XXXX to date XXX." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
                   "value": "EGA 1" ,
                   "valueMeaning": "The EGA 1 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX." ,
                   "isDeprecated": "false"
@@ -2671,7 +2677,7 @@
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
             "description": "The Lucy Mission science activity plan identifier." ,
-            "isNillable": "false" ,
+            "isNillable": "true" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
@@ -2747,7 +2753,7 @@
             "steward": "katecrombie" ,
             "versionId": "1.18" ,
             "description": "The Lucy Mission trojan asteroid visit name." ,
-            "isNillable": "false" ,
+            "isNillable": "true" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
@@ -3045,13 +3051,13 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "dataType": "ASCII_NonNegative_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_NonNegative_Integer" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
             "minimumValue": "0" ,
-            "maximumValue": "9223372036854775807" ,
-            "pattern": "null" ,
+            "maximumValue": "18446744073709551615" ,
+            "pattern": "[0-9]+" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,

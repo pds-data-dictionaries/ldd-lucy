@@ -3,25 +3,26 @@
 >>  INFO IM Version Id: 1.18.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.24
->>  INFO Date: Tue Jun 27 17:19:01 UTC 2023
+>>  INFO Date: Tue Sep 05 21:07:23 UTC 2023
 >>  INFO PARENT_DIR: /tmp/lddtool-14.2.4
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.2.4/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.2.4/lib
 
 >>> INFO Init:  - Config.Properties Namespace Id Using:pds
 >>> INFO Init:  - LDD Dictionary_Type is Mission
+>>> INFO Attribute: <load_identifier> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <sap_identifier> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <visit_name> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <observation_id> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <observation_id> - The default maximum value provided by the attribute's data type is being overridden with 99999
 >>> INFO Attribute: <observation_id_count> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <observation_id_count> - The default maximum value provided by the attribute's data type is being overridden with 99999
->>> INFO Attribute: <observation_missing_packets> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <load_identifier> - The default minimum value provided by the attribute's data type is being overridden with 21289
 >>> INFO Attribute: <load_identifier> - The default maximum value provided by the attribute's data type is being overridden with 99999
 >>> INFO Attribute: <latch_count> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <test_pattern_setting> - The default minimum value provided by the attribute's data type is being overridden with 0
->>> INFO Attribute: <test_pattern_setting> - The default maximum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <test_pattern_setting> - The default maximum value provided by the attribute's data type is being overridden with 2
 >>> INFO Attribute: <scan_row_pixels> - The default minimum value provided by the attribute's data type is being overridden with 1
->>> INFO Attribute: <fpe_drop_frames> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> WARNING Init:  - Config.Properties Namespace Id Not Found:lucy
 
  -- LDDTool Execution Summary --

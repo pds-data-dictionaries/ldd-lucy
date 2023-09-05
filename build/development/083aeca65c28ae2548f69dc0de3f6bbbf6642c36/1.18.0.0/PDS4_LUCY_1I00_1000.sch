@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Tue Jun 27 17:19:01 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Tue Sep 05 21:07:23 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -148,9 +148,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:Lucy_Observation_Planning/lucy:mission_segment">
-      <sch:assert test=". = ('CRUISE 1', 'EGA 1')">
+      <sch:assert test=". = ('CRUISE 1', 'CRUISE 2', 'EGA 1')">
         <title>lucy:Lucy_Observation_Planning/lucy:mission_segment/lucy:mission_segment</title>
-        The attribute lucy:Lucy_Observation_Planning/lucy:mission_segment must be equal to one of the following values 'CRUISE 1', 'EGA 1'.</sch:assert>
+        The attribute lucy:Lucy_Observation_Planning/lucy:mission_segment must be equal to one of the following values 'CRUISE 1', 'CRUISE 2', 'EGA 1'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
