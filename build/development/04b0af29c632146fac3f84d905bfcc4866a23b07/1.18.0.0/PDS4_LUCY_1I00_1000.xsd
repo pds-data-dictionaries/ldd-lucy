@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Thu Nov 02 21:32:43 UTC 2023 -->
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Fri Nov 10 17:53:25 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -90,11 +90,11 @@ _TBD_Ingest_LDD
       <xs:element name="first_packet_timestamp" type="lucy:first_packet_timestamp" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="last_packet_timestamp" type="lucy:last_packet_timestamp" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="xsum_error_flag_status" type="lucy:xsum_error_flag_status" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="lr_acquisition_start_block" type="lucy:lr_acquisition_start_block" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="lr_acquisition_start_block" nillable="true" type="lucy:lr_acquisition_start_block" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="mce_start_postion" type="lucy:mce_start_postion" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="mce_end_postion" type="lucy:mce_end_postion" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="board_selection" type="lucy:board_selection" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="blocks_allocated" type="lucy:blocks_allocated" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="blocks_allocated" nillable="true" type="lucy:blocks_allocated" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="lucy:playback_header_type = ('LEISA_CDS', 'LEISA_NONCDS', 'MVIC', 'OTHER')"/> -->
@@ -121,7 +121,7 @@ _TBD_Ingest_LDD
       <xs:element name="ttcam_status" type="lucy:ttcam_status" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
-    <!-- <xs:assert test="lucy:mission_segment = ('CRUISE 1', 'CRUISE 2', 'EGA 1')"/> -->
+    <!-- <xs:assert test="lucy:mission_segment = ('CRUISE 1', 'CRUISE 2', 'CRUISE 3', 'DINKINESH', 'DONALDJOHANSON', 'EGA 1', 'EGA 2')"/> -->
     <!-- <xs:assert test="lucy:instrument_side = ('N/A', 'SIDE_1', 'SIDE_2')"/> -->
     <!-- <xs:assert test="lucy:llorri_status = ('ACTIVE', 'POWERED', 'UNKNOWN', 'UNPOWERED')"/> -->
     <!-- <xs:assert test="lucy:lralph_status = ('ACTIVE', 'POWERED', 'UNKNOWN', 'UNPOWERED')"/> -->
@@ -305,15 +305,16 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="blocks_allocated">
+  <xs:complexType name="blocks_allocated">
     <xs:annotation>
 <xs:documentation>The number of blocks allocated</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
-     <xs:maxInclusive value="9223372036854775807"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="board_selection">
     <xs:annotation>
@@ -627,16 +628,17 @@ _TBD_Ingest_LDD
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="lr_acquisition_start_block">
+  <xs:complexType name="lr_acquisition_start_block">
     <xs:annotation>
-      <xs:documentation>The Lralph observation acquisition start block
+      <xs:documentation>The L'Ralph observation acquisition start block
         address.</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Integer">
-     <xs:minInclusive value="-9223372036854775808"/>
-     <xs:maxInclusive value="9223372036854775807"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="lralph_status">
     <xs:annotation>

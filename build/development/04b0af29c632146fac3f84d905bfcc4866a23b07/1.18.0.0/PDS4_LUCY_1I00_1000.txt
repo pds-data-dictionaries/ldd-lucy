@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Nov 02 21:32:43 UTC 2023
+   Time                   Fri Nov 10 17:53:25 UTC 2023
    Common Schema          [PDS4_PDS_1I00.xsd]
    Common Schematron      [PDS4_PDS_1I00.sch]
    IM Version Id:         1.18.0.0
@@ -314,7 +314,8 @@ Parsed Input - Attributes:
    name                   lr_acquisition_start_block
    version                1.18
    value data type        ASCII_Integer
-   description            The Lralph observation acquisition start block address.
+   description            The L'Ralph observation acquisition start block address.
+   nillable               true
 
    name                   mce_start_postion
    version                1.18
@@ -335,6 +336,7 @@ Parsed Input - Attributes:
    version                1.18
    value data type        ASCII_Integer
    description            The number of blocks allocated
+   nillable               true
 
    name                   mvic_ccd_list
    version                1.18

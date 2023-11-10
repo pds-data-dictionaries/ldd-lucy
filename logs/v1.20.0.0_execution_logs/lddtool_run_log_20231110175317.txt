@@ -1,18 +1,21 @@
 
 >>  INFO LDDTOOL Version: 14.3.0
->>  INFO IM Version Id: 1.18.0.0
+>>  INFO IM Version Id: 1.20.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.24
->>  INFO Date: Thu Nov 02 21:32:43 UTC 2023
+>>  INFO IM Label Version Id: 1.26
+>>  INFO Date: Fri Nov 10 17:53:17 UTC 2023
 >>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
 
->>> INFO Init:  - Config.Properties Namespace Id Using:pds
+>>> INFO Init:  - Config.Properties Namespace Id Found:lucy
+>>> INFO Init:  - Config.Properties Namespace Id Using:lucy
 >>> INFO Init:  - LDD Dictionary_Type is Mission
 >>> INFO Attribute: <load_identifier> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <sap_identifier> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <visit_name> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <lr_acquisition_start_block> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <blocks_allocated> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <observation_id> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <observation_id> - The default maximum value provided by the attribute's data type is being overridden with 99999
 >>> INFO Attribute: <observation_id_count> - The default minimum value provided by the attribute's data type is being overridden with 0
@@ -23,16 +26,15 @@
 >>> INFO Attribute: <test_pattern_setting> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <test_pattern_setting> - The default maximum value provided by the attribute's data type is being overridden with 2
 >>> INFO Attribute: <scan_row_pixels> - The default minimum value provided by the attribute's data type is being overridden with 1
->>> WARNING Init:  - Config.Properties Namespace Id Not Found:lucy
 
  -- LDDTool Execution Summary --
-     1 warning(s)
+     0 warning(s)
      0 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1I00
+     - IM Version: 1K00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -42,9 +44,9 @@ Input:
 
 Output:
 
-     - ./PDS4_LUCY_1I00_1000.xsd
-     - ./PDS4_LUCY_1I00_1000.sch
-     - ./PDS4_LUCY_1I00_1000.xml
-     - ./export/JSON/PDS4_PDS_1I00.JSON
+     - ./PDS4_LUCY_1K00_1000.xsd
+     - ./PDS4_LUCY_1K00_1000.sch
+     - ./PDS4_LUCY_1K00_1000.xml
+     - ./export/JSON/PDS4_PDS_1K00.JSON
 
 >>  INFO Exit(0)
