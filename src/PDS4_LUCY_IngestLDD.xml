@@ -241,6 +241,22 @@
         <value>CRUISE 2</value>
         <value_meaning>The Cruise 2 Lucy Mission segment from date XXXX to date XXX.</value_meaning>
       </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>DINKINESH</value>
+        <value_meaning>The Dinkinesh encounter Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>CRUISE 3</value>
+        <value_meaning>The Cruise 3 Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>EGA 2</value>
+        <value_meaning>The EGA 2 (Earth Gravity Assist) Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>DONALDJOHANSON</value>
+        <value_meaning>The Donaldjohanson encounter Lucy Mission segment from date XXXX to date XXX.</value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -741,9 +757,9 @@
     <name>lr_acquisition_start_block</name>
     <version_id>1.0</version_id>
     <local_identifier>lucy.LRalph_Instrument_Common_Parameters.lr_acquisition_start_block</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <nillable_flag>true</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>The Lralph observation acquisition start block address.</definition>
+    <definition>The L'Ralph observation acquisition start block address.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -809,7 +825,7 @@
     <name>blocks_allocated</name>
     <version_id>1.0</version_id>
     <local_identifier>lucy.LRalph_Instrument_Common_Parameters.blocks_allocated</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <nillable_flag>true</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
     <definition>The number of blocks allocated</definition>
     <DD_Value_Domain>
