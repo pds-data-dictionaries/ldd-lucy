@@ -1,12 +1,10 @@
 
->>  INFO LDDTOOL Version: 14.3.0
+>>  INFO LDDTOOL Version: 15.1.0
 >>  INFO IM Version Id: 1.20.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.26
->>  INFO Date: Mon Dec 11 17:41:54 UTC 2023
->>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
->>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
->>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
+>>  INFO Date: Thu Jul 25 18:29:38 UTC 2024
+>>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:lucy
 >>> INFO Init:  - Config.Properties Namespace Id Using:lucy

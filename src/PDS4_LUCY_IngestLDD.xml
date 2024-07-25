@@ -1188,12 +1188,12 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>leisa_fpe_ir_temperature</name>
+    <name>leisa_fpa_temperature</name>
     <version_id>1.0</version_id>
-    <local_identifier>lucy.LEISA_Instrument_Parameters.leisa_fpe_ir_temperature</local_identifier>
+    <local_identifier>lucy.LEISA_Instrument_Parameters.leisa_fpa_temperature</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>LEISA FPE IR Temperature (TBR)</definition>
+    <definition>LEISA Focal Plane Array Temperature</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -1622,7 +1622,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>lucy.LEISA_Instrument_Parameters.leisa_fpe_ir_temperature</identifier_reference>
+      <identifier_reference>lucy.LEISA_Instrument_Parameters.leisa_fpa_temperature</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>

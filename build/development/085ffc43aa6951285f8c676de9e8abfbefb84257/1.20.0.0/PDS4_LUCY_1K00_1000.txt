@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.3.0
+   LDDTool Version        15.1.0
    LDD Version Id:        1.0.0.0
    LDD Label Version Id:  1.26
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Dec 11 17:41:54 UTC 2023
+   Time                   Thu Jul 25 18:29:38 UTC 2024
    Common Schema          [PDS4_PDS_1K00.xsd]
    Common Schematron      [PDS4_PDS_1K00.sch]
    IM Version Id:         1.20.0.0
@@ -15,7 +15,6 @@ Configuration:
    IM Label Version Id:   1.26
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
-   IM Configuration File  [MDPTNConfigClassDisp.xml]
    IM Glossary            [Glossary.pins]
    IM Document Spec       [DMDocument.pins]
 
@@ -488,10 +487,10 @@ Parsed Input - Attributes:
    value data type        ASCII_Integer
    description            LEISA offset (TBR)
 
-   name                   leisa_fpe_ir_temperature
+   name                   leisa_fpa_temperature
    version                1.20
    value data type        ASCII_Real
-   description            LEISA FPE IR Temperature (TBR)
+   description            LEISA Focal Plane Array Temperature
    unit of measure type   Units_of_Temperature
 
 Parsed Input - Classes:
@@ -857,7 +856,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      lucy.LEISA_Instrument_Parameters.leisa_fpe_ir_temperature
+      local identifier      lucy.LEISA_Instrument_Parameters.leisa_fpa_temperature
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
