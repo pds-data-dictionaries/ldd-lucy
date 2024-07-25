@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Mon Dec 11 17:41:49 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Thu Jul 25 18:29:41 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -19,9 +19,9 @@
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
   <sch:pattern>
-    <sch:rule context="lucy:LEISA_Instrument_Parameters/lucy:leisa_fpe_ir_temperature">
+    <sch:rule context="lucy:LEISA_Instrument_Parameters/lucy:leisa_fpa_temperature">
       <sch:assert test="@unit = ('K', 'degC')">
-        <title>lucy:LEISA_Instrument_Parameters/lucy:leisa_fpe_ir_temperature/lucy:leisa_fpe_ir_temperature</title>
+        <title>lucy:LEISA_Instrument_Parameters/lucy:leisa_fpa_temperature/lucy:leisa_fpa_temperature</title>
         The attribute @unit must be equal to one of the following values 'K', 'degC'.</sch:assert>
     </sch:rule>
   </sch:pattern>
