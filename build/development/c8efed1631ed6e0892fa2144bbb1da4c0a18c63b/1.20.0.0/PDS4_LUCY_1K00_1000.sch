@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Thu Aug 01 22:40:55 UTC 2024 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Thu Aug 01 23:53:23 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.20.0.0 - System Build 13.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -18,6 +18,13 @@
 		   <!--        lists. These two types of rules have been -->
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
+  <sch:pattern>
+    <sch:rule context="lucy:Diffuse_Source/lucy:units_of_conversion_constants">
+      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)')">
+        <title>lucy:Diffuse_Source/lucy:units_of_conversion_constants/lucy:units_of_conversion_constants</title>
+        The attribute lucy:Diffuse_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LEISA_Instrument_Parameters/lucy:leisa_fpa_temperature">
       <sch:assert test="@unit = ('K', 'degC')">
@@ -228,6 +235,20 @@
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>lucy:MVIC_Instrument_Parameters/lucy:mvic_tdi_row_integration_time/lucy:mvic_tdi_row_integration_time</title>
         The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:Point_Source/lucy:units_of_conversion_constants">
+      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)')">
+        <title>lucy:Point_Source/lucy:units_of_conversion_constants/lucy:units_of_conversion_constants</title>
+        The attribute lucy:Point_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:Radiometric_Conversion_Constants/lucy:pivot_wavelength">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>lucy:Radiometric_Conversion_Constants/lucy:pivot_wavelength/lucy:pivot_wavelength</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

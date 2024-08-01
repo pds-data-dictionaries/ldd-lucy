@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Aug 01 22:40:57 UTC 2024
+   Time                   Thu Aug 01 23:53:20 UTC 2024
    Common Schema          [PDS4_PDS_1I00.xsd]
    Common Schematron      [PDS4_PDS_1I00.sch]
    IM Version Id:         1.18.0.0
@@ -28,9 +28,9 @@ Parameters:
    Merge with Master      false
 
 Summary:
-   Classes                8
-   Attributes             82
-   Associations           83
+   Classes                11
+   Attributes             89
+   Associations           98
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -493,7 +493,77 @@ Parsed Input - Attributes:
    description            LEISA Focal Plane Array Temperature
    unit of measure type   Units_of_Temperature
 
+   name                   pivot_wavelength
+   version                1.18
+   value data type        ASCII_Real
+   description             The value contained in the lucy:pivot_wavelength attribute is used when converting L'LORRI calibrated pixel values to physical units. 
+   minimum value          0.0
+   unit of measure type   Units_of_Length
+
+   name                   solar_constant
+   version                1.18
+   value data type        ASCII_Real
+   description             The lucy:solar_constant attribute supplies the constant to be used for sources with a spectral distribution similar to the Sun to convert calibrated pixel values to physical units. 
+
+   name                   red_trojan_constant
+   version                1.18
+   value data type        ASCII_Real
+   description             The lucy:red_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "red" Trojans to convert calibrated pixel values to physical units. 
+
+   name                   gray_trojan_constant
+   version                1.18
+   value data type        ASCII_Real
+   description             The lucy:gray_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "gray" Trojans to convert calibrated pixel values to physical units. 
+
+   name                   dinkinesh_constant
+   version                1.18
+   value data type        ASCII_Real
+   description             The lucy:dinkinesh_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of Dinkinesh to convert calibrated pixel values to physical units. 
+
+   name                   photometric_zero_point
+   version                1.18
+   value data type        ASCII_Real
+   description             The lucy:photometric_zero_point attribute supplies the photometric zero point to be used to convert between units of (ir)radiance and visual magnitude, V. 
+
+   name                   units_of_conversion_constants
+   version                1.18
+   value data type        ASCII_Short_String_Collapsed
+   description             For resolved sources, the radiometric conversion produces data in units of radiance. For unresolved sources, the conversion results in units of flux (irradiance). The lucy:units_of_conversion_constants attribute contains the appropriate physical units for the conversion constants in the class in which it is contained to produce either radiance or flux units, as appropriate, when the conversion is applied. 
+
 Parsed Input - Classes:
+
+   name                   Diffuse_Source
+   description             The lucy:Point_Source class presents radiometric conversion constants for converting calibrated pixel values into physical units for resolved/extended sources. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      lucy:units_of_conversion_constants
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:solar_constant
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:red_trojan_constant
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:gray_trojan_constant
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:dinkinesh_constant
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
 
    name                   Lucy_Observation_Time_Information
    description            Lucy Mission observation identification and timing information.
@@ -684,6 +754,11 @@ Parsed Input - Classes:
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
+
+      local identifier      lucy:Radiometric_Conversion_Constants
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
 
    name                   LRalph_Instrument_Common_Parameters
    description            The Lucy LRalph instrument class that contains the common (LEISA and MVIC) instrument specific attributes relevant to the labeled data product.
@@ -973,5 +1048,66 @@ Parsed Input - Classes:
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
+
+   name                   Point_Source
+   description             The lucy:Point_Source class presents radiometric conversion constants for converting calibrated pixel values into physical units for unresolved/point sources. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      lucy:units_of_conversion_constants
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:solar_constant
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:red_trojan_constant
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:gray_trojan_constant
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:dinkinesh_constant
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Radiometric_Conversion_Constants
+   description             The lucy:Radiometric_Conversion_Constants class provides the values needed to perform the conversion from the calibrated pixel values to physical units. This conversion is dependent on the spectral distribition of the source, the detector wavelength range, and whether or not the source is resolved. A description of how to convert from data values to physical units is provided in the LLORRI SIS document. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      lucy:pivot_wavelength
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:photometric_zero_point
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy:Diffuse_Source
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      lucy:Point_Source
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
 
 End of Report

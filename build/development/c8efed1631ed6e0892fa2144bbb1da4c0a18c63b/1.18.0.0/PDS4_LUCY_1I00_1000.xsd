@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Thu Aug 01 22:40:55 UTC 2024 -->
-  <!-- Generated from the PDS4 Information Model Version 1.20.0.0 - System Build 13.1 -->
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Thu Aug 01 23:53:20 UTC 2024 -->
+  <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.20.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.18.0.0 - pds: - Common Dictionary                                       -->
   <!-- 1.0.0.0 - lucy: - Lucy Mission LDD                                        -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -15,7 +15,7 @@
     attributeFormDefault="unqualified"
     version="1.0.0.0">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1K00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -31,6 +31,25 @@ _TBD_Ingest_LDD
   <xs:element name="Lucy_Product_Information" type="lucy:Lucy_Product_Information"> </xs:element>
   <xs:element name="Lucy_Target_List" type="lucy:Lucy_Target_List"> </xs:element>
   <xs:element name="MVIC_Instrument_Parameters" type="lucy:MVIC_Instrument_Parameters"> </xs:element>
+
+  <xs:complexType name="Diffuse_Source">
+    <xs:annotation>
+      <xs:documentation> The lucy:Point_Source class presents
+        radiometric conversion constants for converting calibrated pixel
+        values into physical units for resolved/extended sources.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="units_of_conversion_constants" type="lucy:units_of_conversion_constants" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="solar_constant" type="lucy:solar_constant" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="red_trojan_constant" type="lucy:red_trojan_constant" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="gray_trojan_constant" type="lucy:gray_trojan_constant" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="dinkinesh_constant" type="lucy:dinkinesh_constant" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test="lucy:units_of_conversion_constants = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)')"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
 
   <xs:complexType name="LEISA_Instrument_Parameters">
     <xs:annotation>
@@ -63,6 +82,7 @@ _TBD_Ingest_LDD
       <xs:element name="latch_count" type="lucy:latch_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="calibration_lamp_level_1" type="lucy:calibration_lamp_level_1" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="calibration_lamp_level_2" type="lucy:calibration_lamp_level_2" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Radiometric_Conversion_Constants" type="lucy:Radiometric_Conversion_Constants" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -205,6 +225,44 @@ _TBD_Ingest_LDD
       <xs:element name="mvic_fpe_vis_temperature" type="lucy:mvic_fpe_vis_temperature" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="mvic_observation_allocation" type="lucy:mvic_observation_allocation" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="mvic_tdi_row_integration_time" type="lucy:mvic_tdi_row_integration_time" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Point_Source">
+    <xs:annotation>
+      <xs:documentation> The lucy:Point_Source class presents
+        radiometric conversion constants for converting calibrated pixel
+        values into physical units for unresolved/point sources.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="units_of_conversion_constants" type="lucy:units_of_conversion_constants" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="solar_constant" type="lucy:solar_constant" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="red_trojan_constant" type="lucy:red_trojan_constant" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="gray_trojan_constant" type="lucy:gray_trojan_constant" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="dinkinesh_constant" type="lucy:dinkinesh_constant" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test="lucy:units_of_conversion_constants = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)')"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+  <xs:complexType name="Radiometric_Conversion_Constants">
+    <xs:annotation>
+      <xs:documentation> The lucy:Radiometric_Conversion_Constants class
+        provides the values needed to perform the conversion from the
+        calibrated pixel values to physical units. This conversion is
+        dependent on the spectral distribition of the source, the
+        detector wavelength range, and whether or not the source is
+        resolved. A description of how to convert from data values to
+        physical units is provided in the LLORRI SIS document.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="pivot_wavelength" type="lucy:pivot_wavelength" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Diffuse_Source" type="lucy:Diffuse_Source" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Point_Source" type="lucy:Point_Source" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="photometric_zero_point" type="lucy:photometric_zero_point" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -383,6 +441,19 @@ _TBD_Ingest_LDD
     </xs:simpleContent>
   </xs:complexType>
 
+  <xs:simpleType name="dinkinesh_constant">
+    <xs:annotation>
+      <xs:documentation> The lucy:dinkinesh_constant attribute supplies
+        the constant to be used for sources with a spectral distribution
+        similar to that of Dinkinesh to convert calibrated pixel values
+        to physical units. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="first_packet_timestamp_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -420,6 +491,19 @@ _TBD_Ingest_LDD
         false</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Boolean">
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="gray_trojan_constant">
+    <xs:annotation>
+      <xs:documentation> The lucy:gray_trojan_constant attribute
+        supplies the constant to be used for sources with a spectral
+        distribution similar to that of "gray" Trojans to convert
+        calibrated pixel values to physical units. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -1001,6 +1085,39 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="photometric_zero_point">
+    <xs:annotation>
+      <xs:documentation> The lucy:photometric_zero_point attribute
+        supplies the photometric zero point to be used to convert
+        between units of (ir)radiance and visual magnitude, V.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="pivot_wavelength_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0.0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="pivot_wavelength">
+    <xs:annotation>
+      <xs:documentation> The value contained in the
+        lucy:pivot_wavelength attribute is used when converting L'LORRI
+        calibrated pixel values to physical units. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="lucy:pivot_wavelength_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
   <xs:simpleType name="planned_ccd1_tdi_configuration">
     <xs:annotation>
       <xs:documentation>The planned CCD 1 TDI
@@ -1133,6 +1250,19 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="red_trojan_constant">
+    <xs:annotation>
+      <xs:documentation> The lucy:red_trojan_constant attribute supplies
+        the constant to be used for sources with a spectral distribution
+        similar to that of "red" Trojans to convert calibrated pixel
+        values to physical units. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
   <xs:complexType name="sap_identifier">
     <xs:annotation>
       <xs:documentation>The Lucy Mission science activity plan
@@ -1151,6 +1281,19 @@ _TBD_Ingest_LDD
         row.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Integer">
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="solar_constant">
+    <xs:annotation>
+      <xs:documentation> The lucy:solar_constant attribute supplies the
+        constant to be used for sources with a spectral distribution
+        similar to the Sun to convert calibrated pixel values to
+        physical units. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
 
@@ -1229,6 +1372,23 @@ _TBD_Ingest_LDD
     <xs:annotation>
       <xs:documentation>The status of the TTCAM
         instrument.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="units_of_conversion_constants">
+    <xs:annotation>
+      <xs:documentation> For resolved sources, the radiometric
+        conversion produces data in units of radiance. For unresolved
+        sources, the conversion results in units of flux (irradiance).
+        The lucy:units_of_conversion_constants attribute contains the
+        appropriate physical units for the conversion constants in the
+        class in which it is contained to produce either radiance or
+        flux units, as appropriate, when the conversion is applied.
+        </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>

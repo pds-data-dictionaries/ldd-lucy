@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.18.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.24
->>  INFO Date: Thu Aug 01 22:40:57 UTC 2024
+>>  INFO Date: Thu Aug 01 23:53:20 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Using:pds
@@ -23,6 +23,7 @@
 >>> INFO Attribute: <test_pattern_setting> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <test_pattern_setting> - The default maximum value provided by the attribute's data type is being overridden with 2
 >>> INFO Attribute: <scan_row_pixels> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <pivot_wavelength> - The default minimum value provided by the attribute's data type is being overridden with 0.0
 >>> WARNING Init:  - Config.Properties Namespace Id Not Found:lucy
 
  -- LDDTool Execution Summary --
