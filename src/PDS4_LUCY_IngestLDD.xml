@@ -1321,7 +1321,7 @@
         </value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>(DN/s)/(erg/cm^2/s/Angstrom/sr)</value>
+        <value>(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)</value>
         <value_meaning>
           Units for conversion factors for resolved (diffuse) sources, to produce units
           of radiance.
