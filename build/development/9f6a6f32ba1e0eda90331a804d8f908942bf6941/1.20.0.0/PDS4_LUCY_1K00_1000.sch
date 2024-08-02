@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Thu Aug 01 23:53:20 UTC 2024 -->
-  <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Fri Aug 02 00:25:41 UTC 2024 -->
+  <!-- Generated from the PDS4 Information Model Version 1.20.0.0 - System Build 13.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -20,9 +20,9 @@
 		   <!-- ================================================ -->
   <sch:pattern>
     <sch:rule context="lucy:Diffuse_Source/lucy:units_of_conversion_constants">
-      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)')">
+      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)')">
         <title>lucy:Diffuse_Source/lucy:units_of_conversion_constants/lucy:units_of_conversion_constants</title>
-        The attribute lucy:Diffuse_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
+        The attribute lucy:Diffuse_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -48,16 +48,16 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_1">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_1/lucy:calibration_lamp_level_1</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_2">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_2/lucy:calibration_lamp_level_2</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -239,9 +239,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:Point_Source/lucy:units_of_conversion_constants">
-      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)')">
+      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)')">
         <title>lucy:Point_Source/lucy:units_of_conversion_constants/lucy:units_of_conversion_constants</title>
-        The attribute lucy:Point_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
+        The attribute lucy:Point_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
