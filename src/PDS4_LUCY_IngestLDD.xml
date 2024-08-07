@@ -8,7 +8,7 @@
   <full_name>Crombie, M. Katherine</full_name>
   <steward_id>katecrombie</steward_id>
   <namespace_id>lucy</namespace_id>
-  <last_modification_date_time>2023-01-30T10:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2024-08-07T00:00:00Z</last_modification_date_time>
   <DD_Attribute>
     <name>observation_id</name>
     <version_id>1.0</version_id>
@@ -519,6 +519,85 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
       <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>bias_level</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.bias_level</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:bias_level attribute appears in calibrated L'LORRI data products and contains the mean bias level of the detector's dark columns.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>read_noise</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.read_noise</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:read_noise attribute appears in calibrated L'LORRI data products and provides the CCD read noise for the image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>ccd_gain</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.ccd_gain</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:ccd_gain attribute appears in calibrated L'LORRI data products and provides the CCD gain setting for the image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>electron/DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>bias_offset</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.bias_offset</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:bias_offset attribute appears in calibrated L'LORRI data products and provides the CCD bias offset between the active and inactive regions of the detector.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>electron/DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>frame_transfer_scrub_time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.frame_transfer_scrub_time</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:frame_transfer_scrub_time attribute appears in calibrated L'LORRI data products and contains the instrument's frame transfer/scrub time.
+      For the L'LORRI instrument, these two quantities (transfer and scrub times) are exactly equal.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>11.0</minimum_value>
+      <maximum_value>12.0</maximum_value>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+      <specified_unit_id>ms</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1585,6 +1664,36 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>lucy.LLORRI_Instrument_Parameters.calibration_lamp_level_2</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.bias_level</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.read_noise</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.ccd_gain</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.bias_offset</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.frame_transfer_scrub_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
