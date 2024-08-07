@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Fri Aug 02 00:25:33 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Wed Aug 07 00:09:59 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -82,6 +82,11 @@ _TBD_Ingest_LDD
       <xs:element name="latch_count" type="lucy:latch_count" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="calibration_lamp_level_1" type="lucy:calibration_lamp_level_1" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="calibration_lamp_level_2" type="lucy:calibration_lamp_level_2" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="bias_level" type="lucy:bias_level" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="read_noise" type="lucy:read_noise" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="ccd_gain" type="lucy:ccd_gain" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="bias_offset" type="lucy:bias_offset" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="frame_transfer_scrub_time" type="lucy:frame_transfer_scrub_time" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Radiometric_Conversion_Constants" type="lucy:Radiometric_Conversion_Constants" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -363,6 +368,47 @@ _TBD_Ingest_LDD
 	   </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="bias_level_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="bias_level">
+    <xs:annotation>
+      <xs:documentation>The lucy:bias_level attribute appears in
+        calibrated L'LORRI data products and contains the mean bias
+        level of the detector's dark columns.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="lucy:bias_level_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Misc" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="bias_offset_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="bias_offset">
+    <xs:annotation>
+      <xs:documentation>The lucy:bias_offset attribute appears in
+        calibrated L'LORRI data products and provides the CCD bias
+        offset between the active and inactive regions of the
+        detector.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="lucy:bias_offset_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Misc" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
   <xs:complexType name="blocks_allocated">
     <xs:annotation>
 <xs:documentation>The number of blocks allocated</xs:documentation>
@@ -417,6 +463,26 @@ _TBD_Ingest_LDD
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="lucy:calibration_lamp_level_2_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Misc" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="ccd_gain_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ccd_gain">
+    <xs:annotation>
+      <xs:documentation>The lucy:ccd_gain attribute appears in
+        calibrated L'LORRI data products and provides the CCD gain
+        setting for the image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="lucy:ccd_gain_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Misc" use="required" />
       </xs:extension>
     </xs:simpleContent>
@@ -493,6 +559,28 @@ _TBD_Ingest_LDD
     <xs:restriction base="pds:ASCII_Boolean">
 	   </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="frame_transfer_scrub_time_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="11.0"/>
+     <xs:maxInclusive value="12.0"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="frame_transfer_scrub_time">
+    <xs:annotation>
+      <xs:documentation> The lucy:frame_transfer_scrub_time attribute
+        appears in calibrated L'LORRI data products and contains the
+        instrument's frame transfer/scrub time. For the L'LORRI
+        instrument, these two quantities (transfer and scrub times) are
+        exactly equal. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="lucy:frame_transfer_scrub_time_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="gray_trojan_constant">
     <xs:annotation>
@@ -1249,6 +1337,26 @@ _TBD_Ingest_LDD
     <xs:restriction base="pds:ASCII_Boolean">
 	   </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="read_noise_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="read_noise">
+    <xs:annotation>
+      <xs:documentation>The lucy:read_noise attribute appears in
+        calibrated L'LORRI data products and provides the CCD read noise
+        for the image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="lucy:read_noise_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Misc" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="red_trojan_constant">
     <xs:annotation>

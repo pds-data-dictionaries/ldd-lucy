@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Aug 02 00:25:41 UTC 2024
+   Time                   Wed Aug 07 00:09:54 UTC 2024
    Common Schema          [PDS4_PDS_1K00.xsd]
    Common Schematron      [PDS4_PDS_1K00.sch]
    IM Version Id:         1.20.0.0
@@ -29,8 +29,8 @@ Parameters:
 
 Summary:
    Classes                11
-   Attributes             89
-   Associations           98
+   Attributes             94
+   Associations           103
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -44,7 +44,7 @@ Parsed Input - Header:
    Steward                katecrombie
    Namespace Id           lucy
    Comment                _TBD_Ingest_LDD
-   Last Modification Time 2023-01-30T10:00:00Z
+   Last Modification Time 2024-08-07T00:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -216,6 +216,42 @@ Parsed Input - Attributes:
    value data type        ASCII_Integer
    description            The Digital Number (DN) setting for calibration lamp two.
    unit of measure type   Units_of_Misc
+
+   name                   bias_level
+   version                1.20
+   value data type        ASCII_Real
+   description            The lucy:bias_level attribute appears in calibrated L'LORRI data products and contains the mean bias level of the detector's dark columns.
+   minimum value          0
+   unit of measure type   Units_of_Misc
+
+   name                   read_noise
+   version                1.20
+   value data type        ASCII_Real
+   description            The lucy:read_noise attribute appears in calibrated L'LORRI data products and provides the CCD read noise for the image.
+   minimum value          0
+   unit of measure type   Units_of_Misc
+
+   name                   ccd_gain
+   version                1.20
+   value data type        ASCII_Real
+   description            The lucy:ccd_gain attribute appears in calibrated L'LORRI data products and provides the CCD gain setting for the image.
+   minimum value          0
+   unit of measure type   Units_of_Misc
+
+   name                   bias_offset
+   version                1.20
+   value data type        ASCII_Real
+   description            The lucy:bias_offset attribute appears in calibrated L'LORRI data products and provides the CCD bias offset between the active and inactive regions of the detector.
+   minimum value          0
+   unit of measure type   Units_of_Misc
+
+   name                   frame_transfer_scrub_time
+   version                1.20
+   value data type        ASCII_Real
+   description             The lucy:frame_transfer_scrub_time attribute appears in calibrated L'LORRI data products and contains the instrument's frame transfer/scrub time. For the L'LORRI instrument, these two quantities (transfer and scrub times) are exactly equal. 
+   minimum value          11.0
+   maximum value          12.0
+   unit of measure type   Units_of_Time
 
    name                   playback_start
    version                1.20
@@ -751,6 +787,31 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      lucy.LLORRI_Instrument_Parameters.calibration_lamp_level_2
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy.LLORRI_Instrument_Parameters.bias_level
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy.LLORRI_Instrument_Parameters.read_noise
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy.LLORRI_Instrument_Parameters.ccd_gain
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy.LLORRI_Instrument_Parameters.bias_offset
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      lucy.LLORRI_Instrument_Parameters.frame_transfer_scrub_time
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of

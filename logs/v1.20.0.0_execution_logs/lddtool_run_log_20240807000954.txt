@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.20.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.26
->>  INFO Date: Fri Aug 02 00:25:41 UTC 2024
+>>  INFO Date: Wed Aug 07 00:09:54 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:lucy
@@ -21,6 +21,12 @@
 >>> INFO Attribute: <load_identifier> - The default minimum value provided by the attribute's data type is being overridden with 21289
 >>> INFO Attribute: <load_identifier> - The default maximum value provided by the attribute's data type is being overridden with 99999
 >>> INFO Attribute: <latch_count> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <bias_level> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <read_noise> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <ccd_gain> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <bias_offset> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <frame_transfer_scrub_time> - The default minimum value provided by the attribute's data type is being overridden with 11.0
+>>> INFO Attribute: <frame_transfer_scrub_time> - The default maximum value provided by the attribute's data type is being overridden with 12.0
 >>> INFO Attribute: <test_pattern_setting> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <test_pattern_setting> - The default maximum value provided by the attribute's data type is being overridden with 2
 >>> INFO Attribute: <scan_row_pixels> - The default minimum value provided by the attribute's data type is being overridden with 1
