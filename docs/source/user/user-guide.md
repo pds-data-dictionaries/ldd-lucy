@@ -85,6 +85,16 @@ The mission_segment attribute is the only required element in this class.
 
 ## `Lucy_Target_List`
 
+The Lucy_Targt_List class and attributes describe the list of potential targets in a given 
+science observation. This information is supplemental to the Target_Identification class
+found in all observational data products and is derived from SPICE calculations. The attributes
+included in this call are as follows:
+
+      lucy:target_fov_count
+      lucy:target_fov_name
+
+The target_fov_count attribute is the only required element in the class.      
+
 ## `Lucy_Product_Information`
 
 ## `LLORRI_Instrument_Parameters`
