@@ -104,11 +104,46 @@ in any PDS4 discipline dictionary. For general data processing information the p
 dictinary (proc:) is used. The attributes found in the Lucy_Product_Information are as follows:
 
    lucy:internal_product_version_id
-
+  
 The internal_product_verion_id is the only element in this class and is required. It is possible
 that additional attributes could be added over the course of the mission. 
 
 ## `LLORRI_Instrument_Parameters`
+
+The LLORRI_Instrument_Parameters class is the wrapper class for all L'LORRI instrument specific
+parameters. This class only appears in L'LORRI data products. The LLORRI_Instrument_Parameters class
+contians the attributes ans sub-classes listed below:
+
+      lucy:attached_sync_marker_dec
+      lucy:attached_sync_marker_hex
+      lucy:latch_count
+      lucy:calibration_lamp_level_1
+      lucy:calibration_lamp_level_2
+      lucy:bias_level
+      lucy:read_noise
+      lucy:ccd_gain
+      lucy:bias_offset
+      lucy:frame_transfer_scrub_time
+      Radiometric_Conversion_Constants
+
+The lucy:Radiometric_Conversion_Constants class provides the values needed to perform the conversion from
+the calibrated pixel values to physical units. This conversion is dependent on the spectral distribition
+of the source, the detector wavelength range, and whether or not the source is resolved. A description of
+how to convert from data values to physical units is provided in the LLORRI SIS document. The sub-class
+contians attributes and sub-sub-classes as follows:
+
+      lucy:pivot_wavelength
+      lucy:Diffuse_Source
+      lucy:Point_Source
+      lucy:photometric_zero_point
+
+All attributes and classes are required for the Radiometric_Conversion_Constants class. 
+
+The lucy:Diffuse_Source class is used to
+
+
+
+
 
 ## `LRalph_Instrument_Common_Parameters`
 
