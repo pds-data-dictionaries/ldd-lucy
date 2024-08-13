@@ -41,7 +41,8 @@ There is not a genaric wrapper class. The eight main classes are as follows:
 
 General classes used for all Lucy products begin with the "Lucy_", whereas
 instrument specific classes begin with the instrument or instrument suite name.
-Instrument specific classes may contain sub-classes.
+Instrument specific classes may contain sub-classes. Use case examples for each class
+can be foundin the Examples section of this document.
 
 ## `Lucy_Observation_Time_Information`
 
@@ -88,7 +89,7 @@ The mission_segment attribute is the only required element in this class.
 The Lucy_Targt_List class and attributes describe the list of potential targets in a given 
 science observation. This information is supplemental to the Target_Identification class
 found in all observational data products and is derived from SPICE calculations. The attributes
-included in this call are as follows:
+included in this class are as follows:
 
       lucy:target_fov_count
       lucy:target_fov_name
@@ -96,6 +97,16 @@ included in this call are as follows:
 The target_fov_count attribute is the only required element in the class.      
 
 ## `Lucy_Product_Information`
+
+The Lucy_Product_Information class and attributes describe any *Lucy* data processing pipeline
+specific data product information. Attributes collected in this class do not have counterparts
+in any PDS4 discipline dictionary. For general data processing information the processing 
+dictinary (proc:) is used. The attributes found in the Lucy_Product_Information are as follows:
+
+   lucy:internal_product_version_id
+
+The internal_product_verion_id is the only element in this class and is required. It is possible
+that additional attributes could be added over the course of the mission. 
 
 ## `LLORRI_Instrument_Parameters`
 
