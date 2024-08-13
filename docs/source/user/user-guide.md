@@ -53,10 +53,10 @@ class are listed below:
       lucy:observation_id_count
       lucy:observation_complete
       lucy:observation_missing_packets
-      lucy:start_sclk" minOccurs
-      lucy:mid_sclk" minOccurs
-      lucy:stop_sclk" minOccurs
-      lucy:mid_utc" minOccurs
+      lucy:start_sclk
+      lucy:mid_sclk
+      lucy:stop_sclk
+      lucy:mid_utc
       lucy:mid_sclk_string
       lucy:mid_utc_doy
       lucy:mid_utc_jd
