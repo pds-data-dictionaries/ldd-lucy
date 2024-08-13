@@ -1,5 +1,5 @@
-{date}  
-{author}
+{August 12, 2024}  
+{C. Gobat and M.K. Crombie}
 
 > Note to authors who use this outline: The outline is a
 > suggestion only. It includes the minimum of content needed to inform the
@@ -19,32 +19,50 @@ Instrumentation specific classes and attributes.
 
 # Organization of Classes and Attributes
 
-*Give a schematic diagram or a list showing the hierarchy of
-classes in order of appearance in label. Refer the reader to the
-[Definitions section](#definitions) for complete definitions. An example of such a
-list is given on the page `<dead link>` on the PDS Small Bodies Node wiki. In this
-example the names of classes and attributes have hyperlinks to their definitions
-further down the page, a useful lookup tool.*
+The *Lucy* mission dictionary is organized as set of four general classes and four
+instrument specific classes. The general classes are used to desribe either observational
+parameters common to all mission instruments, or general data processing parameters. 
+The instrument specific classes are used to describe instrument specific metadata that
+does not easily fit into a discipline specific data dictionary due to a mission specific
+nuance.
 
-*The author should take into consideration the complexity
-of the dictionary when organizing this section.  If the hierarchy is large or
-complicated, it may be helpful to break it down by class as shown in the
-following subsections, but don’t forget to provide a high-level view of how the
-classes relate to one another.*
+The *Lucy* mission dictionary hierarchy is an alphabetical list of the eight main classes.
+There is not a genaric wrapper class. The eight main classes are as follows:
+ 
+  LEISA_Instrument_Parameters
+  LLORRI_Instrument_Parameters
+  LRalph_Instrument_Common_Parameters
+  Lucy_Observation_Planning
+  Lucy_Observation_Time_Information
+  Lucy_Product_Information
+  Lucy_Target_List
+  MVIC_Instrument_Parameters
+
+General classes used for all Lucy products begin with the "Lucy_", whereas
+instrument specific classes begin with the instrument or instrument suite name.
+Instrument specific classes may contain sub-classes.
 
 ## `Lucy_Observation_Time_Information`
 
-*What is this class for?*
+The Lucy_Observation_Time_Informtion class is used to record the observation indentification
+and timing information attached to each science observation sequence. The attributes in this 
+class are listed below:
 
-*Give a schematic diagram or a list of the attributes in this class in order of 
-appearance in label. Refer reader to Definitions section for complete definitions.*
+      lucy:observation_id
+      lucy:observation_id_count
+      lucy:observation_complete
+      lucy:observation_missing_packets
+      lucy:start_sclk" minOccurs
+      lucy:mid_sclk" minOccurs
+      lucy:stop_sclk" minOccurs
+      lucy:mid_utc" minOccurs
+      lucy:mid_sclk_string
+      lucy:mid_utc_doy
+      lucy:mid_utc_jd
+      lucy:mid_ephemeris_time
+      lucy:ccsds_sclk_time
 
-*Give label snippets showing use of the class and attributes, with annotations 
-as appropriate. Refer reader to Examples section for complete examples.*
-
-*Explain why some things are required and others are optional.*
-
-*List and explain any rules that apply to this class (e.g. from Schematron).*
+The observation_id attribute is the only required element.
 
 ## `Lucy_Observation_Planning`
 
@@ -60,6 +78,18 @@ as appropriate. Refer reader to Examples section for complete examples.*
 
 ## `MVIC_Instrument_Parameters`
 
+
+*What is this class for?*
+
+*Give a schematic diagram or a list of the attributes in this class in order of 
+appearance in label. Refer reader to Definitions section for complete definitions.*
+
+*Give label snippets showing use of the class and attributes, with annotations 
+as appropriate. Refer reader to Examples section for complete examples.*
+
+*Explain why some things are required and others are optional.*
+
+*List and explain any rules that apply to this class (e.g. from Schematron).*
 
 # Definitions
 
