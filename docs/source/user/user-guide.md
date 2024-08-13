@@ -67,6 +67,22 @@ The observation_id attribute is the only required element.
 
 ## `Lucy_Observation_Planning`
 
+The Lucy_Observation_Planning class is a general *Lucy* class used to record the science
+planning metadata that describes how the observation sequence was planned and the status of
+the instruments during that observation. The attributes included in this class are as folllows:
+
+      lucy:load_identifier
+      lucy:mission_segment
+      lucy:sap_identifier
+      lucy:visit_name
+      lucy:instrument_side
+      lucy:llorri_status
+      lucy:lralph_status
+      lucy:ltes_status
+      lucy:ttcam_status
+
+The mission_segment attribute is the only required element in this class.
+
 ## `Lucy_Target_List`
 
 ## `Lucy_Product_Information`
