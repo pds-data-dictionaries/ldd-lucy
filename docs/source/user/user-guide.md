@@ -29,14 +29,15 @@ nuance.
 The *Lucy* mission dictionary hierarchy is an alphabetical list of the eight main classes.
 There is not a genaric wrapper class. The eight main classes are as follows:
  
-  LEISA_Instrument_Parameters
-  LLORRI_Instrument_Parameters
-  LRalph_Instrument_Common_Parameters
-  Lucy_Observation_Planning
-  Lucy_Observation_Time_Information
-  Lucy_Product_Information
-  Lucy_Target_List
-  MVIC_Instrument_Parameters
+     LEISA_Instrument_Parameters
+     LLORRI_Instrument_Parameters
+     LRalph_Instrument_Common_Parameters
+     Lucy_Observation_Planning
+     Lucy_Observation_Time_Information
+     Lucy_Product_Information
+     Lucy_Target_List
+     MVIC_Instrument_Parameters
+
 
 General classes used for all Lucy products begin with the "Lucy_", whereas
 instrument specific classes begin with the instrument or instrument suite name.
