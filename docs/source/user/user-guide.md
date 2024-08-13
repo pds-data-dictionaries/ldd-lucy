@@ -139,11 +139,29 @@ contians attributes and sub-sub-classes as follows:
 
 All attributes and classes are required for the Radiometric_Conversion_Constants class. 
 
-The lucy:Diffuse_Source class is used to
+The lucy:Diffuse_Source sub-class presents radiometric conversion constants for converting calibrated pixel 
+values into physical units for unresolved sources. 
 
+      lucy:units_of_conversion_constants
+      lucy:solar_constant
+      lucy:red_trojan_constant
+      lucy:gray_trojan_constant
+      lucy:dinkinesh_constant
 
+The units, solar, red and gray constant attribues are required. Target sepcific constants are not required and
+will be extended as the mission progresses.
 
+The lucy:Point_Source sub-class presents radiometric conversion constants for converting calibrated pixel 
+values into physical units for resolved/extended sources.
 
+      lucy:units_of_conversion_constants
+      lucy:solar_constant
+      lucy:red_trojan_constant
+      lucy:gray_trojan_constant
+      lucy:dinkinesh_constant
+
+The units, solar, red and gray constant attribues are required. Target sepcific constants are not required and
+will be extended as the mission progresses.
 
 ## `LRalph_Instrument_Common_Parameters`
 
