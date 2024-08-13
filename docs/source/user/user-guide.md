@@ -382,12 +382,34 @@ Note: the examples below reside within the `Mission_Area` section of their PDS4 
 
 ```xml
 <lucy:LLORRI_Instrument_Parameters>
-  <lucy:attached_sync_marker_dec>449838109</lucy:attached_sync_marker_dec>
-  <lucy:attached_sync_marker_hex>0x1ACFFC1D</lucy:attached_sync_marker_hex>
-  <lucy:latch_count>0</lucy:latch_count>
-  <lucy:calibration_lamp_level_1 unit="DN">1600</lucy:calibration_lamp_level_1>
-  <lucy:calibration_lamp_level_2 unit="DN">1600</lucy:calibration_lamp_level_2>
-</lucy:LLORRI_Instrument_Parameters>
+                <lucy:attached_sync_marker_dec>449838109</lucy:attached_sync_marker_dec>
+                <lucy:attached_sync_marker_hex>0x1ACFFC1D</lucy:attached_sync_marker_hex>
+                <lucy:latch_count>0</lucy:latch_count>
+                <lucy:calibration_lamp_level_1 unit="DN">0</lucy:calibration_lamp_level_1>
+                <lucy:calibration_lamp_level_2 unit="DN">0</lucy:calibration_lamp_level_2>
+                <lucy:bias_level unit="DN">120.0531862745098</lucy:bias_level>
+                <lucy:read_noise unit="DN">0.9</lucy:read_noise>
+                <lucy:ccd_gain unit="electron/DN">21.1</lucy:ccd_gain>
+                <lucy:bias_offset unit="DN">3.2</lucy:bias_offset>
+                <lucy:frame_transfer_scrub_time unit="ms">11.7762</lucy:frame_transfer_scrub_time>
+                <lucy:Radiometric_Conversion_Constants>
+                    <lucy:pivot_wavelength unit="Angstrom">6030.0</lucy:pivot_wavelength>
+                    <lucy:Diffuse_Source>
+                        <lucy:units_of_conversion_constants>(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)</lucy:units_of_conversion_constants>
+                        <lucy:solar_constant>271300.0</lucy:solar_constant>
+                        <lucy:red_trojan_constant>278400.0</lucy:red_trojan_constant>
+                        <lucy:gray_trojan_constant>271200.0</lucy:gray_trojan_constant>
+                        <lucy:dinkinesh_constant>286000.0</lucy:dinkinesh_constant>
+                    </lucy:Diffuse_Source>
+                    <lucy:Point_Source>
+                        <lucy:units_of_conversion_constants>(DN/s)/(erg/cm^2/s/Angstrom)</lucy:units_of_conversion_constants>
+                        <lucy:solar_constant>1.101e+16</lucy:solar_constant>
+                        <lucy:red_trojan_constant>1.13e+16</lucy:red_trojan_constant>
+                        <lucy:gray_trojan_constant>1.101e+16</lucy:gray_trojan_constant>
+                    </lucy:Point_Source>
+                    <lucy:photometric_zero_point>18.93</lucy:photometric_zero_point>
+                </lucy:Radiometric_Conversion_Constants>
+            </lucy:LLORRI_Instrument_Parameters>
 ```
 
 ## L'Ralph common instrument parameters (shared between MVIC and LEISA)
