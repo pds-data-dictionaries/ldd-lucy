@@ -196,6 +196,21 @@ None of the attributes are required for this class.
 
 ## `LEISA_Instrument_Parameters`
 
+The LEISA_Instrument_Parameters class contians attributes specific to the LEISA instrument and
+only appears in LEISA dt products. The attributes contained in this calss area as follows:
+
+      lucy:leisa_mode
+      lucy:leisa_observation_allocation
+      lucy:leisa_integration_time
+      lucy:leisa_atrack_start_channel
+      lucy:leisa_atrack_num_channels
+      lucy:leisa_xtrack_start_row
+      lucy:leisa_xtrack_num_rows
+      lucy:leisa_offset
+      lucy:leisa_fpa_temperature
+
+ None of the attributes are required.  
+      
 ## `MVIC_Instrument_Parameters`
 
 
