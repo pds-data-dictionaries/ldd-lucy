@@ -112,7 +112,7 @@ that additional attributes could be added over the course of the mission.
 
 The LLORRI_Instrument_Parameters class is the wrapper class for all L'LORRI instrument specific
 parameters. This class only appears in L'LORRI data products. The LLORRI_Instrument_Parameters class
-contians the attributes ans sub-classes listed below:
+contians the attributes and sub-classes listed below:
 
       lucy:attached_sync_marker_dec
       lucy:attached_sync_marker_hex
@@ -164,6 +164,35 @@ The units, solar, red and gray constant attribues are required. Target sepcific 
 will be extended as the mission progresses.
 
 ## `LRalph_Instrument_Common_Parameters`
+
+The LRalph_Instrument_Common_Paramters class is a set of instrument attributes that are specific to the L'Ralph
+instrument suite which comprises the LEISA and MVIC components. This class only appears in LEISA or MVIC data products.
+The LRalph_Instrument_Common_Paramters class contains the following attributes:
+
+      lucy:playback_start
+      lucy:playback_end
+      lucy:playback_bad_pixel_mask_status
+      lucy:playback_truncation_status
+      lucy:playback_header_type
+      lucy:test_pattern_setting
+      lucy:hs_xtrack_start_row
+      lucy:scan_row_pixels
+      lucy:fpecrc_error_flag
+      lucy:m4_calibration_state
+      lucy:m4_blackbody_setting
+      lucy:m4_filament_setting
+      lucy:fpe_drop_frames
+      lucy:mce_scan_rate
+      lucy:first_packet_timestamp
+      lucy:last_packet_timestamp
+      lucy:xsum_error_flag_status
+      lucy:lr_acquisition_start_block
+      lucy:mce_start_postion
+      lucy:mce_end_postion
+      lucy:board_selection
+      lucy:blocks_allocated
+
+None of the attributes are required for this class.
 
 ## `LEISA_Instrument_Parameters`
 
