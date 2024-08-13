@@ -209,22 +209,37 @@ only appears in LEISA dt products. The attributes contained in this calss area a
       lucy:leisa_offset
       lucy:leisa_fpa_temperature
 
- None of the attributes are required.  
+None of the attributes are required.  
       
 ## `MVIC_Instrument_Parameters`
 
+The MVIC_Instrument_Parameters class contians attributes specific to the MVIC instrument and
+only appears in LEISA dt products. The attributes contained in this calss area as follows:
 
-*What is this class for?*
+      lucy:mvic_ccd_list
+      lucy:mvic_actual_atrack_summing
+      lucy:mvic_actual_xtrack_summing
+      lucy:mvic_planned_atrack_summing
+      lucy:mvic_planned_xtrack_summing
+      lucy:mvic_summing_mode
+      lucy:actual_ccd1_tdi_configuration
+      lucy:actual_ccd2_tdi_configuration
+      lucy:actual_ccd3_tdi_configuration
+      lucy:actual_ccd4_tdi_configuration
+      lucy:actual_ccd5_tdi_configuration
+      lucy:actual_ccd6_tdi_configuration
+      lucy:planned_ccd1_tdi_configuration
+      lucy:planned_ccd2_tdi_configuration
+      lucy:planned_ccd3_tdi_configuration
+      lucy:planned_ccd4_tdi_configuration
+      lucy:planned_ccd5_tdi_configuration
+      lucy:planned_ccd6_tdi_configuration
+      lucy:mvic_fpe_vis_temperature
+      lucy:mvic_observation_allocation
+      lucy:mvic_tdi_row_integration_time
 
-*Give a schematic diagram or a list of the attributes in this class in order of 
-appearance in label. Refer reader to Definitions section for complete definitions.*
+None of the attributes are required.    
 
-*Give label snippets showing use of the class and attributes, with annotations 
-as appropriate. Refer reader to Examples section for complete examples.*
-
-*Explain why some things are required and others are optional.*
-
-*List and explain any rules that apply to this class (e.g. from Schematron).*
 
 # Definitions
 
