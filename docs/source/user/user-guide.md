@@ -42,7 +42,7 @@ There is not a genaric wrapper class. The eight main classes are as follows:
 General classes used for all Lucy products begin with the "Lucy_", whereas
 instrument specific classes begin with the instrument or instrument suite name.
 Instrument specific classes may contain sub-classes. Use case examples for each class
-can be foundin the Examples section of this document.
+can be found in the Examples section of this document.
 
 ## `Lucy_Observation_Time_Information`
 
