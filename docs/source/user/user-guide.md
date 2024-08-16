@@ -243,99 +243,120 @@ None of the attributes are required.
 
 # Definitions
 
-| Type      | Name           | Description   |
-|-----------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Class     | Lucy_Observation_Time_Information   | Lucy Mission observation identification and timing information.           |
-| Attribute | observation_id | The Lucy Mission observation identifier.|
-| Attribute | observation_id_count | The Lucy Mission observation identifier counter. This number increments by 1 with each planned observation sequence.|
-| Attribute | observation_complete | The Lucy Mission observation is complete.              |
-| Attribute | observation_missing_packets         | The number of missing packets in the observation. The best data quality has no missing packets.|
-| Attribute | start_sclk     | The start time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1/65535 of a second.    |
-| Attribute | mid_sclk       | The middle time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1/65535 of a second.   |
-| Attribute | stop_sclk      | The end time of the observation in Lucy spacrcraft clock format sssssssss.ttttttt, seconds.ticks where ticks are 1/65535 of a second.      |
-| Attribute | mid_utc        | The middle time of the observation in ISO UTC format "YYYY-MM-DDTHH:MM:SS.sss"  |
-| Attribute | mid_sclk_string| The middle time of the observation in Lucy spacecraft clock string partition/SSSSSSSSSS-PPPPP, where S is seconds and P are ticks in units of 1/66535 of a second.    |
-| Attribute | mid_utc_doy    | The middle time of the observation in ISO DOY format, YYYY-DOYTHH:MM:SS.sss     |
-| Attribute | mid_utc_jd     | The middle time of the observation in Julian day format, |
-| Attribute | mid_ephemeris_time   | The middle time of the observation in ephemeris time, seconds past J2000, TDB.  |
-| Attribute | ccsds_sclk_time| The Lucy spacecraft clock time of the CCSDS playback timestamp in seconds.|
-| Class     | Lucy_Observation_Planning           | The Lucy Mission observation planning class and attributes describe the observation planning information needed to understand the planned spacecraft observations.    |
-| Attribute | load_identifier| The command sequence load identifier|
-| Attribute | mission_segment| The Lucy Mission segment           |
-| Attribute | sap_identifier | The Lucy Mission science activity plan identifier.     |
-| Attribute | visit_name     | The Lucy Mission trojan asteroid visti name.           |
-| Attribute | instrument_side| The Lucy elctronics side.          |
-| Attribute | llorri_status  | The status of the L'LORRI instrument.  |
-| Attribute | lralph_status  | The status of the L'RALPH instrument.  |
-| Attribute | ltes_status    | The status of the L'TES instrument.|
-| Attribute | ttcam_status   | The status of the TTCAM instrument.|
-| Class     | Lucy_Target_List     | The Lucy Mission class that contains the target list of potential targets in a given observation.    |
-| Attribute | target_fov_count     | The number of possible targets in FOV (SPICE-derived). |
-| Attribute | target_fov_name| The name of the possible target in FOV (SPICE-derived).|
-| Class     | Lucy_Product_Information            | The Lucy Mission class that contains attributes specific to the labeled data product.          |
-| Attribute | internal_product_version_id         | The Lucy pipeline internal data processing version number. This number is likely to be grater than the PDS version number given in the version_id attribute in the Observation_Area. |
-| Class     | LLORRI_Instrument_Parameters        | The Lucy LORRI instrument class that contains instrument specific attributes relevant to the labeled data product.  |
-| Attribute | attached_sync_marker_dec            | Attached Sync Marker, decimal representation.          |
-| Attribute | attached_sync_marker_hex            | Attached Sync Marker, hexidecimal representation.      |
-| Attribute | latch_count    | The number of times a latchup has occurred.            |
-| Attribute | calibration_lamp_level_1            | The Digital Number (DN) setting for calibration lamp one.|
-| Attribute | calibration_lamp_level_2            | The Digital Number (DN) setting for calibration lamp two.|
-| Class     | LRalph_Instrument_Common_Parameters | The Lucy LRalph instrument class that contains the common (LEISA and MVIC) instrument specific attributes relevant to the labeled data product.  |
-| Attribute | playback_start                  | Playback science header timstamp of the first m4 packet used in spacecraft clock seconds.      |
-| Attribute | playback_end                    | Playback science header timstamp of the last m4 packet used in spacecraft clock seconds.       |
-| Attribute | playback_bad_pixel_mask_status  | Status of the bad pixel map, true or false             |
-| Attribute | playback_truncation_status      | Status of the truncation enabled, true or false        |
-| Attribute | playback_header_type            | Playback header type|
-| Attribute | test_pattern_setting            | The instrument test pattern setting, 0 is science, 1 is test pattern.     |
-| Attribute | hs_xtrack_start_row             | The cross track start row from the high speed header.  |
-| Attribute | scan_row_pixels                 | The number of pixels in the scan row.  |
-| Attribute | scan_row_pixels                 | The number of pixels in the scan row.  |
-| Attribute | fpecrc_error_flag               | FPE checksum error flag, true or false |
-| Attribute | m4_calibration_state            | Calibration state (TBR)            |
-| Attribute | m4_blackbody_setting            | Blackbody state (TBR)              |
-| Attribute | m4_filament_setting             | Filament setting (TBR)             |
-| Attribute | fpe_drop_frames                 | Number of FPE drop frames (TBR).   |
-| Attribute | mce_scan_rate                   | The MCE scan rate (TBR).           |
-| Attribute | first_packet_timestamp          | The timestamp of the first packet recorded in spacraft clock seconds.     |
-| Attribute | last_packet_timestamp           | The timestamp of the last packet recorded in spacraft clock seconds.      |
-| Attribute | xsum_error_flag_status          | Xsum flag indicating if there are errors in the stored data packet, true or false              |
-| Attribute | lr_acquisition_start_block      | The Lralph observation acquisition start block address.|
-| Attribute | mce_start_postion               | The MCE start position (TBR), units TBD|
-| Attribute | mce_end_postion                 | The MCE start position (TBR), units TBD|
-| Attribute | board_selection                 | The instrument side selected       |
-| Attribute | blocks_allocated                | The number of blocks allocated     |
-| Class     | LEISA_Instrument_Parameters         | The Lucy LRalph LEISA class that contains the instrument specific attributes relevant to the labeled data product.  |
-| Attribute | leisa_mode                          | LEISA observation mode, T is CDS, F is NONCDS. (TBR)   |
-| Attribute | leisa_observation_allocation        | LEISA observation allocation duration. |
-| Attribute | leisa_integration_time              | LEISA observation integration time (TBR)|
-| Attribute | leisa_atrack_start_channel          | LEISA along track start channel    |
-| Attribute | leisa_atrack_num_channels           | LEISA along track number of channels.  |
-| Attribute | leisa_xtrack_start_row              | LEISA cross track start row.       |
-| Attribute | leisa_xtrack_num_rows               | LEISA cross track number of rows.  |
-| Attribute | leisa_offset   | LEISA offset (TBR) |
-| Attribute | leisa_fpe_ir_temperature            | LEISA FPE IR Temperature (TBR)     |
-| Class     | MVIC_Instrument_Parameters          | The Lucy LRalph MVIC class that contains the instrument specific attributes relevant to the labeled data product.   |
-| Attribute | mvic_ccd_list                       | List of the MVIC CCDs used in this observation.        |
-| Attribute | mvic_actual_atrack_summing          | MVIC actual along track pixel summing. |
-| Attribute | mvic_actual_xtrack_summing          | MVIC actual along track pixel summing. |
-| Attribute | mvic_planned_atrack_summing         | MVIC actual summing mode.          |
-| Attribute | mvic_planned_xtrack_summing         | MVIC planned along track pixel summing.|
-| Attribute | mvic_summing_mode                   | MVIC planned summing mode.         |
-| Attribute | actual_ccd1_tdi_configuration       | Actual CCD 1 TDI configuration.    |
-| Attribute | actual_ccd2_tdi_configuration       | Actual CCD 2 TDI configuration.    |
-| Attribute | actual_ccd3_tdi_configuration       | Actual CCD 3 TDI configuration.    |
-| Attribute | actual_ccd4_tdi_configuration       | Actual CCD 4 TDI configuration.    |
-| Attribute | actual_ccd5_tdi_configuration       | Actual CCD 5 TDI configuration.    |
-| Attribute | actual_ccd6_tdi_configuration       | Actual CCD 6 TDI configuration.    |
-| Attribute | planned_ccd1_tdi_configuration      | The planned CCD 1 TDI configuration.|
-| Attribute | planned_ccd2_tdi_configuration      | The planned CCD 2 TDI configuration.|
-| Attribute | planned_ccd3_tdi_configuration      | The planned CCD 3 TDI configuration.|
-| Attribute | planned_ccd4_tdi_configuration      | The planned CCD 4 TDI configuration.|
-| Attribute | planned_ccd5_tdi_configuration      | The planned CCD 5 TDI configuration.|
-| Attribute | planned_ccd6_tdi_configuration      | The planned CCD 6 TDI configuration.|
-| Attribute | mvic_fpe_vis_temperature            | The MVIC FPE VIS Temperature       |
-| Attribute | mvic_observation_allocation         | MVIC allocated observation duration|
-| Attribute | mvic_tdi_row_integration_time       | MVIC allocated observation duration|
+|Type	   | 	Name	                           | Description                                            |
+---------- |  ----------------------------------   | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Class	   | 	Lucy_Observation_Time_Information	|	Lucy Mission observation identification and timing information.                                               |
+|Attribute | 	observation_id	|	The lucy:observation_id attribute appears in all mission science data products and reports the Lucy mission observation identifier. 	|
+|Attribute | 	observation_id_count	|	The lucy:observation_id_count attribute appears in all mission science data products and reports the Lucy mission observation identifier counter. This number increments by 1 with each planned observation sequence (L'LORRI only). 	|
+|Attribute |	observation_complete	|	The lucy:observation_complete attribute appears in all mission science data products and reports the observation completion status. 	|
+|Attribute |	observation_missing_packets	|	The lucy:observation_missing_packets attribute appears in all mission science data products and reports the number of missing packets in the observation. The best data quality has no missing packets. 	|
+|Attribute |  	start_sclk	|	The lucy:start_sclk attribute appears in all mission science data products and reports the Lucy spacecraft clock (SCLK) time (in seconds) at the start of the observation. 	|
+|Attribute |	mid_sclk	|	The lucy:mid_sclk attribute appears in all mission science data products and reports the Lucy spacecraft clock (SCLK) time (in seconds) at the mid-time of the observation. 	|
+|Attribute |	stop_sclk	|	The lucy:stop_sclk attribute appears in all mission science data products and reports the Lucy spacecraft clock (SCLK) time (in seconds) at the end of the observation. 	|
+|Attribute |	mid_utc	|	The lucy:mid_utc attribute appears in all mission science data products and reports the middle time of the observation in ISO UTC format "YYYY-MM-DDTHH:MM:SS.sss" 	|
+|Attribute |	mid_sclk_string	|	The lucy:mid_sclk_string attribute appears in all mission science data products and reports the middle time of the observation in Lucy spacecraft clock string partition/SSSSSSSSSS-PPPPP, where S is seconds and P are ticks in units of 1/66535 of a second. 	|
+|Attribute |	mid_utc_doy	|	The lucy:mid_utc_doy attribute appears in all mission science data products and reports the middle time of the observation in ISO DOY format, YYYY-DOYTHH:MM:SS.sss	|
+|Attribute |	mid_utc_jd	|	The lucy:mid_utc_jd attribute appears in all mission science data products and reports the middle time of the observation in Julian day format.	|
+|Attribute |	mid_ephemeris_time	|	The lucy:mid_ephemeris_time attribute appears in all mission science data products and reports the middle time of the observation in ephemeris time, seconds past J2000, TDB.	|
+|Attribute |	ccsds_sclk_time	|	The lucy:ccsds_sclk_time attribute appears in all mission science data products and reports the Lucy spacecraft clock time of the CCSDS (Consultative Committee for Space Data Systems) playback timestamp in seconds.	|
+|Class	   |    Lucy_Observation_Planning	|	The Lucy Mission observation planning class and attributes describe the observation planning information needed to understand the planned spacecraft observations.	|
+|Attribute |	load_identifier	|	The lucy:load_identifier attribute appears in all mission science data products and reports the Lucy mission command sequence load identifier	|
+|Attribute |	mission_segment	|	The lucy:mission_segment attribute appears in all mission science data products and reports the Lucy Mission segment during which the observation occurred.	|
+|Attribute |	sap_identifier	|	The lucy:sap_identifier attribute appears in all mission science data products and reports the Lucy mission science activity plan (sap) identifier.	|
+|Attribute |	visit_name	|	The lucy:visit_name appears in all mission science data products and reports the Lucy mission asteroid or target visit name.	|
+|Attribute |	instrument_side	|	The lucy:instrument_side attribute appears in all mission science data products and reports the Lucy spacecraft elctronics side.	|
+|Attribute |	llorri_status	|	The lucy:llorri_status attribute appears in all mission science data products and reports the operational status of the L'LORRI instrument.	|
+|Attribute |	lralph_status	|	The lucy:lralph_status attribute appears in all mission science data products and reports the operational status of the L'RALPH instrument.	|
+|Attribute |	ltes_status	|	The lucy:ltes_status attribute appears in all mission science data products and reports the operational status of the L'TES instrument.	|
+|Attribute |	ttcam_status	|	The lucy:ttcam_status attribute appears in all mission science data products and reports the operational status of the TTCAM instrument.	|
+|Class	   |   	Lucy_Target_List	|	The Lucy Mission class that contains the target list of potential targets in a given observation.	|
+|Attribute |	target_fov_count	|	The lucy:target_fov_count attribute appears in all mission science data products and reports the number of possible targets in the field of view (FOV) (SPICE-derived attribute).	|
+|Attribute |	target_fov_name	|	The lucy:target_fov_name attribute appears in all mission science data products and reports the name of the possible target in the field of view (FOV) (SPICE-derived attribute).	|
+|Class	   |   	Lucy_Product_Information	|	The Lucy Mission class that contains attributes specific to the labeled data product.	|
+|Attribute |	internal_product_version_id	|	The lucy:internal_product_version_id attribute appears in all mission science data products and reports the Lucy pipeline internal data processing version number. This number is likely to be grater than the PDS version number given in the version_id attribute in the Observation_Area.	|
+|Class	   |  	LLORRI_Instrument_Parameters|	The Lucy LORRI instrument class that contains instrument specific attributes relevant to the labeled data product.	|
+|Attribute |	attached_sync_marker_dec	|	The lucy:attached_sync_marker_dec attribute appears in L'LORRI science data products and reports the attached syncronization marker, decimal representation.	|
+|Attribute |	attached_sync_marker_hex	|	The lucy:attached_sync_marker_hex attribute appears in L'LORRI science data products and reports the attached syncronization marker, hexidecimal representation.	|
+|Attribute |	latch_count	 	|	The lucy:latch_count attribute appears in L'LORRI science data products and reports the number of times a latchup has occurred.	|
+|Attribute |	calibration_lamp_level_1	|	The lucy:calibration_lamp_level_1 attribute appears in L'LORRI science data products and reports the digital number (DN) setting for calibration lamp one.	|
+|Attribute |	calibration_lamp_level_2	|	The lucy:calibration_lamp_level_2 attribute appears in L'LORRI science data products and reports the digital number (DN) setting for calibration lamp two.	|
+|Attribute |	bias_level	|	The lucy:bias_level attribute appears in calibrated L'LORRI data products and contains the mean bias level of the detector's dark columns.	|
+|Attribute |	read_noise	|	The lucy:read_noise attribute appears in calibrated L'LORRI data products and provides the CCD read noise for the image.	|
+|Attribute |	ccd_gain	|	The lucy:ccd_gain attribute appears in calibrated L'LORRI data products and provides the CCD gain setting for the image.	|
+|Attribute |	bias_offset	|	The lucy:bias_offset attribute appears in calibrated L'LORRI data products and provides the CCD bias offset between the active and inactive regions of the detector.	|
+|Attribute |    frame_transfer_scrub_time	|	 The lucy:frame_transfer_scrub_time attribute appears in calibrated L'LORRI data products and contains the instrument's frame transfer/scrub time. For the L'LORRI instrument, these two quantities (transfer and scrub times) are exactly equal. 	|
+|Class	   | 	LRalph_Instrument_Common_Parameters		|	The Lucy LRalph instrument class that contains the common (LEISA and MVIC) instrument specific attributes relevant to the labeled data product. 	|
+|Attribute |	playback_start	|	The lucy:playback_start attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the playback science header timstamp of the first m4 packet in spacecraft clock seconds.	|
+|Attribute |	playback_end	|	The lucy:playback_end attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the playback science header timstamp of the last m4 packet in spacecraft clock seconds.	|
+|Attribute |	playback_bad_pixel_mask_status	|	The lucy:playback_bad_pixel_masl_status attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the status of the bad pixel map, true or false.			|
+|Attribute |	playback_truncation_status	|	The lucy:playback_truncation attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the status of the truncation enable, true or false.					|
+|Attribute |	playback_header_type	|	The lucy:playback_header_type attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the playback header type													|
+|Attribute |	test_pattern_setting	|	The lucy:test_pattern_setting attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the instrument test pattern setting, 0 is science, 1 is test pattern.	|
+|Attribute |	hs_xtrack_start_row	|	The lucy:hs_xtrack_start_row attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the cross track start row from the high speed header.	|
+|Attribute |	scan_row_pixels	|	The lucy:scan_row_pixels attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the number of pixels in the scan row.	|
+|Attribute |	scan_row_pixels	|	The lucy:scan_row_pixels attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the number of pixels in the scan row.	|
+|Attribute |	fpecrc_error_flag	|	The lucy:fpecrc_error_flag attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the floating point error 9FPE) checksum error flag, true or false. |
+|Attribute |	m4_calibration_state	|	The lucy:m4_calibration_state attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the multi-mission mass memory card (m4) calibration state.	|
+|Attribute |	m4_blackbody_setting	|	The lucy:m4_blackbody_state attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the multi-mission mass memory card (m4) blackbody state. 	|
+|Attribute |	m4_filament_setting	|	The lucy:m4_filament_state attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the multi-mission mass memory card (m4) filament setting. 	|
+|Attribute |	fpe_drop_frames	|	The lucy:fpe_drop_frames attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the number of focal plane electronics (FPE) drop frames. 	|
+|Attribute |	mce_scan_rate	|	The lucy:mce_scan_rate attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the mechanism control electronics (MCE) scan rate. 	|
+|Attribute |	first_packet_timestamp	|	The lucy:first_packet_timestamp appears in L'Ralph (MVIC and LEISA) science data products and reports the timestamp of the first packet recorded in spacecraft clock seconds.	|
+|Attribute |	last_packet_timestamp	|	The lucy:last_packet_timestamp attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the timestamp of the last packet recorded in spacecraft clock seconds.	|
+|Attribute |	xsum_error_flag_status	|	The lucy:xsum_error_flag_status attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the xsum flag indicating if there are errors in the stored data packet, true or false. 	|
+|Attribute |	lr_acquisition_start_block	|	The lucy:lr_acquisition_start_block attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the L'Ralph observation acquisition start block address. |
+|Attribute |	mce_start_postion	|	The lucy:mce_start_postion attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the Mechanism Control Electronics (MCE) cards start position. |
+|Attribute |	mce_end_postion		|	The lucy:mce_end_postion attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the Mechanism Control Electronics (MCE) cards end position. |
+|Attribute |	board_selection		|	The lucy:board_selection attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the instrument electronics side selected. |
+|Attribute |	blocks_allocated	|	The lucy:blocks_allocated attribute appears in L'Ralph (MVIC and LEISA) science data products and reports the number of blocks allocated. |
+|Class	   |   	LEISA_Instrument_Parameters	|	The Lucy LRalph LEISA class that contains the instrument specific attributes relevant to the labeled data product. |
+|Attribute |	leisa_mode	|	The lucy:leisa_mode attribute appears in LEISA science data products and reports the LEISA observation mode, T is CDS - correlated double sample, F is NONCDS - non correlated double sample. |
+|Attribute |	leisa_observation_allocation	|	The lucy:leisa_observation_allocation attribute appears in LEISA science data products and reports the LEISA observation allocation duration. |
+|Attribute |	leisa_integration_time	|	The lucy:leisa_integration_time attribute appears in LEISA science data products and reports the LEISA observation integration time. |
+|Attribute |	leisa_atrack_start_channel	|	The lucy:leisa_atrack_start_channel appears in LEISA science data products and reports the LEISA along track start channel. |
+|Attribute |	leisa_atrack_num_channels	|	The lucy:leisa_atrack_num_channels appears in LEISA science data products and reports the LEISA along track number of channels. |
+|Attribute |	leisa_xtrack_start_row 	|	The lucy:leisa_xtrack_start_row appears in LEISA science data products and reports the LEISA cross track start row. |
+|Attribute |	leisa_xtrack_num_rows	|	The lucy:leisa_xtrack_num_row appears in LEISA science data products and reports the LEISA cross track number of rows. |
+|Attribute |	leisa_offset	|	The lucy:leisa_offset appears in LEISA science data products and reports the LEISA offset. |
+|Attribute |	leisa_fpa_temperature	|	The lucy:leisa_offset appears in LEISA science data products and reports the LEISA focal plane array temperature. |
+|Class	   |   	MVIC_Instrument_Parameters	|	The Lucy LRalph MVIC class that contains the instrument specific attributes relevant to the labeled data product. |
+|Attribute |	mvic_ccd_list 	|	The lucy:mvic_ccd_list attribute appears in MVIC science data products and reports the list of the MVIC charge coupled devices (CCDs) used in this observation. |
+|Attribute |	mvic_actual_atrack_summing	|	The lucy:mvic_actual_atrack_summing attribute appears in MVIC science data products and reports the MVIC actual along track pixel summing.          |
+|Attribute |	mvic_actual_xtrack_summing	|	The lucy:mvic_actual_xtrack_summing attribute appears in MVIC science data products and reports the MVIC actual cross track pixel summing.			|
+|Attribute |	mvic_planned_atrack_summing	|	The lucy:mvic_planned_atrack_summing attribute appears in MVIC science data products and reports the MVIC actual summing mode.						|
+|Attribute |	mvic_planned_xtrack_summing	|	The lucy:mvic_planned_xtrack_summing attribute appears in MVIC science data products and reports the MVIC planned along track pixel summing.		|
+|Attribute |	mvic_summing_mode	|	The lucy:mvic_summing_mode attribute appears in MVIC science data products and reports the MVIC planned summing mode.										|
+|Attribute |	actual_ccd1_tdi_configuration	|	The lucy:actual_ccd1_tdi_configuration attribute appears in MVIC science data products and reports the acctual CCD 1 TDI (time delay integration) configuration.	|
+|Attribute |	actual_ccd2_tdi_configuration	|	The lucy:actual_ccd2_tdi_configuration attribute appears in MVIC science data products and reports the acctual CCD 2 TDI (time delay integration) configuration.	|
+|Attribute |	actual_ccd3_tdi_configuration	|	The lucy:actual_ccd3_tdi_configuration attribute appears in MVIC science data products and reports the acctual CCD 3 TDI (time delay integration) configuration.	|
+|Attribute |	actual_ccd4_tdi_configuration	|	The lucy:actual_ccd4_tdi_configuration attribute appears in MVIC science data products and reports the acctual CCD 4 TDI (time delay integration) configuration.	|
+|Attribute |	actual_ccd5_tdi_configuration	|	The lucy:actual_ccd5_tdi_configuration attribute appears in MVIC science data products and reports the acctual CCD 5 TDI (time delay integration) configuration.	|
+|Attribute |	actual_ccd6_tdi_configuration	|	The lucy:actual_ccd6_tdi_configuration attribute appears in MVIC science data products and reports the acctual CCD 6 TDI (time delay integration) configuration.	|
+|Attribute |	planned_ccd1_tdi_configuration	|	The lucy:planned_ccd1_tdi_configuration attribute appears in MVIC science data products and reports the planned CCD 1 TDI (time delayed integration) configuration.	|
+|Attribute |	planned_ccd2_tdi_configuration	|	The lucy:planned_ccd2_tdi_configuration attribute appears in MVIC science data products and reports the planned CCD 2 TDI (time delayed integration) configuration.	|
+|Attribute |	planned_ccd3_tdi_configuration	|	The lucy:planned_ccd3_tdi_configuration attribute appears in MVIC science data products and reports the planned CCD 3 TDI (time delayed integration) configuration.	|
+|Attribute |	planned_ccd4_tdi_configuration	|	The lucy:planned_ccd4_tdi_configuration attribute appears in MVIC science data products and reports the planned CCD 4 TDI (time delayed integration) configuration.	|
+|Attribute |	planned_ccd5_tdi_configuration	|	The lucy:planned_ccd5_tdi_configuration attribute appears in MVIC science data products and reports the planned CCD 5 TDI (time delayed integration) configuration.	|
+|Attribute |	planned_ccd6_tdi_configuration	|	The lucy:planned_ccd6_tdi_configuration attribute appears in MVIC science data products and reports the planned CCD 6 TDI (time delayed integration) configuration.	|
+|Attribute |	mvic_fpe_vis_temperature	|	The lucy:mvic_fpe_vis_temperature attribute appears in MVIC science data products and reports the MVIC focal plane electronics visible card (FPE VIS) temperature.		|
+|Attribute |	mvic_observation_allocation	|	The lucy:mvic_observation_allocation attribute appears in MVIC science data products and reports the MVIC allocated observation duration. 								|
+|Attribute |	mvic_tdi_row_integration_time	|	The lucy:mvic_tdi_row_integration_time attribute appears in MVIC science data products and reports the MVIC time delay integration (TDI) row integration time.		|
+|Class	   |    Point_Source	|	 The lucy:Point_Source class presents radiometric conversion constants for converting calibrated pixel values into physical units for unresolved/point sources. 					|
+|Attribute |	units_of_conversion_constants	|	 For resolved sources, the radiometric conversion produces data in units of radiance. For unresolved sources, the conversion results in units of flux (irradiance). The lucy:units_of_conversion_constants attribute contains the appropriate physical units for the conversion constants in the class in which it is contained to produce either radiance or flux units, as appropriate, when the conversion is applied. 	|
+|Attribute |	solar_constant	|	 The lucy:solar_constant attribute supplies the constant to be used for sources with a spectral distribution similar to the Sun to convert calibrated pixel values to physical units. 	|
+|Attribute |	red_trojan_constant	|	 The lucy:red_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "red" Trojans to convert calibrated pixel values to physical units. | 
+|Attribute |	gray_trojan_constant	|	 The lucy:gray_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "gray" Trojans to convert calibrated pixel values to physical units. 	|
+|Attribute |	dinkinesh_constant	|	 The lucy:dinkinesh_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of Dinkinesh to convert calibrated pixel values to physical units.  |
+|Class	   |  	Radiometric_Conversion_Constants	|	 The lucy:Radiometric_Conversion_Constants class provides the values needed to perform the conversion from the calibrated pixel values to physical units. This conversion is dependent on the spectral distribition of the source, the detector wavelength range, and whether or not the source is resolved. A description of how to convert from data values to physical units is provided in the LLORRI SIS document. |
+|Attribute |	pivot_wavelength	|	 The value contained in the lucy:pivot_wavelength attribute is used when converting L'LORRI calibrated pixel values to physical units.  |
+|Attribute |	photometric_zero_point	|	 The lucy:photometric_zero_point attribute supplies the photometric zero point to be used to convert between units of (ir)radiance and visual magnitude, V. |
+|Class	   |    Diffuse_Source		| The lucy:Point_Source class presents radiometric conversion constants for converting calibrated pixel values into physical units for resolved/extended sources.   |
+|Attribute |	units_of_conversion_constants	|	 For resolved sources, the radiometric conversion produces data in units of radiance. For unresolved sources, the conversion results in units of flux (irradiance). The lucy:units_of_conversion_constants attribute contains the appropriate physical units for the conversion constants in the class in which it is contained to produce either radiance or flux units, as appropriate, when the conversion is applied. 	|
+|Attribute |	solar_constant		| The lucy:solar_constant attribute supplies the constant to be used for sources with a spectral distribution similar to the Sun to convert calibrated pixel values to physical units.  |
+|Attribute |	red_trojan_constant	|	 The lucy:red_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "red" Trojans to convert calibrated pixel values to physical units. 	|
+|Attribute |	gray_trojan_constant	|	 The lucy:gray_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "gray" Trojans to convert calibrated pixel values to physical units. |
+|Attribute |	dinkinesh_constant	|	 The lucy:dinkinesh_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of Dinkinesh to convert calibrated pixel values to physical units. 	|
+
 
 # Examples
 
