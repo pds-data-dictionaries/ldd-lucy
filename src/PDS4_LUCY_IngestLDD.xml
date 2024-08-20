@@ -8,7 +8,7 @@
   <full_name>Crombie, M. Katherine</full_name>
   <steward_id>katecrombie</steward_id>
   <namespace_id>lucy</namespace_id>
-  <last_modification_date_time>2023-01-30T10:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2024-08-07T00:00:00Z</last_modification_date_time>
   <DD_Attribute>
     <name>observation_id</name>
     <version_id>1.0</version_id>
@@ -519,6 +519,85 @@
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
       <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>bias_level</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.bias_level</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:bias_level attribute appears in calibrated L'LORRI data products and contains the mean bias level of the detector's dark columns.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>read_noise</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.read_noise</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:read_noise attribute appears in calibrated L'LORRI data products and provides the CCD read noise for the image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>ccd_gain</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.ccd_gain</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:ccd_gain attribute appears in calibrated L'LORRI data products and provides the CCD gain setting for the image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>electron/DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>bias_offset</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.bias_offset</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>The lucy:bias_offset attribute appears in calibrated L'LORRI data products and provides the CCD bias offset between the active and inactive regions of the detector.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
+      <specified_unit_id>electron/DN</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>frame_transfer_scrub_time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lucy.LLORRI_Instrument_Parameters.frame_transfer_scrub_time</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:frame_transfer_scrub_time attribute appears in calibrated L'LORRI data products and contains the instrument's frame transfer/scrub time.
+      For the L'LORRI instrument, these two quantities (transfer and scrub times) are exactly equal.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>11.0</minimum_value>
+      <maximum_value>12.0</maximum_value>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+      <specified_unit_id>ms</specified_unit_id>
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
@@ -1200,6 +1279,176 @@
       <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+  <DD_Attribute>
+    <name>pivot_wavelength</name>
+    <version_id>1.0</version_id>
+    <local_identifier>pivot_wavelength</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The value contained in the lucy:pivot_wavelength attribute is used when converting
+      L'LORRI calibrated pixel values to physical units.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <minimum_value>0.0</minimum_value>
+      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+      <specified_unit_id>Angstrom</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>solar_constant</name>
+    <version_id>1.0</version_id>
+    <local_identifier>solar_constant</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:solar_constant attribute supplies the constant to be used for sources with 
+      a spectral distribution similar to the Sun to convert calibrated pixel values to
+      physical units.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>red_trojan_constant</name>
+    <version_id>1.0</version_id>
+    <local_identifier>red_trojan_constant</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:red_trojan_constant attribute supplies the constant to be used for sources
+      with a spectral distribution similar to that of "red" Trojans to convert calibrated
+      pixel values to physical units.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>gray_trojan_constant</name>
+    <version_id>1.0</version_id>
+    <local_identifier>gray_trojan_constant</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:gray_trojan_constant attribute supplies the constant to be used for sources
+      with a spectral distribution similar to that of "gray" Trojans to convert calibrated
+      pixel values to physical units.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>dinkinesh_constant</name>
+    <version_id>1.0</version_id>
+    <local_identifier>dinkinesh_constant</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:dinkinesh_constant attribute supplies the constant to be used for sources with
+      a spectral distribution similar to that of Dinkinesh to convert calibrated pixel values
+      to physical units.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>photometric_zero_point</name>
+    <version_id>1.0</version_id>
+    <local_identifier>photometric_zero_point</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:photometric_zero_point attribute supplies the photometric zero point to be used
+      to convert between units of (ir)radiance and visual magnitude, V.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <DD_Attribute>
+    <name>units_of_conversion_constants</name>
+    <version_id>1.0</version_id>
+    <local_identifier>units_of_conversion_constants</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      For resolved sources, the radiometric conversion produces data in units of radiance.
+      For unresolved sources, the conversion results in units of flux (irradiance).
+      The lucy:units_of_conversion_constants attribute contains the appropriate physical
+      units for the conversion constants in the class in which it is contained to produce
+      either radiance or flux units, as appropriate, when the conversion is applied.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>(DN/s)/(erg/cm^2/s/Angstrom)</value>
+        <value_meaning>
+          Units for conversion factors for unresolved (point) sources, to produce units
+          of flux (irradiance).
+        </value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)</value>
+        <value_meaning>
+          Units for conversion factors for resolved (diffuse) sources, to produce units
+          of radiance.
+        </value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Class>
+    <name>Diffuse_Source</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Diffuse_Source</local_identifier>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:Point_Source class presents radiometric conversion constants for converting
+      calibrated pixel values into physical units for resolved/extended sources.
+    </definition>
+    <DD_Association>
+      <identifier_reference>units_of_conversion_constants</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>solar_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>red_trojan_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>gray_trojan_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>dinkinesh_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
   <DD_Class>
     <name>Lucy_Observation_Time_Information</name>
     <version_id>1.0</version_id>
@@ -1416,6 +1665,42 @@
     <DD_Association>
       <identifier_reference>lucy.LLORRI_Instrument_Parameters.calibration_lamp_level_2</identifier_reference>
       <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.bias_level</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.read_noise</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.ccd_gain</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.bias_offset</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>lucy.LLORRI_Instrument_Parameters.frame_transfer_scrub_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Radiometric_Conversion_Constants</identifier_reference>
+      <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
@@ -1759,6 +2044,89 @@
       <identifier_reference>lucy.MVIC_Instrument_Parameters.mvic_tdi_row_integration_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Point_Source</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Point_Source</local_identifier>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:Point_Source class presents radiometric conversion constants for converting
+      calibrated pixel values into physical units for unresolved/point sources.
+    </definition>
+    <DD_Association>
+      <identifier_reference>units_of_conversion_constants</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>solar_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>red_trojan_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>gray_trojan_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>dinkinesh_constant</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <DD_Class>
+    <name>Radiometric_Conversion_Constants</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Radiometric_Conversion_Constants</local_identifier>
+    <submitter_name>cgobat</submitter_name>
+    <definition>
+      The lucy:Radiometric_Conversion_Constants class provides the values needed to perform
+      the conversion from the calibrated pixel values to physical units. This conversion is
+      dependent on the spectral distribition of the source, the detector wavelength range,
+      and whether or not the source is resolved. 
+      
+      A description of how to convert from data values to physical units is provided
+      in the LLORRI SIS document.
+    </definition>
+    <Internal_Reference>
+      <lid_reference>urn:nasa:pds:lucy.llorri:documents:llorri_sis</lid_reference>
+      <reference_type>class_to_document</reference_type>
+    </Internal_Reference>
+    <DD_Association>
+      <identifier_reference>pivot_wavelength</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Diffuse_Source</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Point_Source</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>photometric_zero_point</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
