@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:build/development/0ad16d69ba4ede41d9a651f55007a11f6bb80047/1.18.0.0/PDS4_LUCY_1I00_1000.xsd
   <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Tue Aug 20 20:32:58 UTC 2024 -->
+=======
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Mon May 15 16:36:06 UTC 2023 -->
+>>>>>>> docs-dev:build/development/360fbe9be58d5bbdaf4f75c55ef4e2533f305bbe/1.18.0.0/PDS4_LUCY_1I00_1000.xsd
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->

@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Example Namespace Documentation
+Lucy Mission LDD Documentation
 ===================================
 
 .. include:: intro.md
@@ -20,4 +20,4 @@ Example Namespace Documentation
     :maxdepth: 3
     :caption: Detailed Documentation
 
-    detailed/example
+    detailed/lucy-ldd
