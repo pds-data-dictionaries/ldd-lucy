@@ -1,21 +1,8 @@
 # *Lucy* mission LDD 
-**REQUIRED**
 
-Submitter: M. Katherine Combie
+Steward: M. Katherine Combie
 
-class
+---
 
-## class
-**REQUIRED**
-
-Submitter: M. Katherine Combie
-
-attribute
-
-### Subheader 3
-
-More details
-
-#### Subheader 4
-
-More Details
+Detailed documentation is in development.
+In the meantime, refer to the user's guide sections for information about this dictionary.
