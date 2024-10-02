@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Fri Apr 07 18:27:36 UTC 2023 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Tue Aug 20 20:32:58 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -19,9 +19,16 @@
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
   <sch:pattern>
-    <sch:rule context="lucy:LEISA_Instrument_Parameters/lucy:leisa_fpe_ir_temperature">
+    <sch:rule context="lucy:Diffuse_Source/lucy:units_of_conversion_constants">
+      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)')">
+        <title>lucy:Diffuse_Source/lucy:units_of_conversion_constants/lucy:units_of_conversion_constants</title>
+        The attribute lucy:Diffuse_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:LEISA_Instrument_Parameters/lucy:leisa_fpa_temperature">
       <sch:assert test="@unit = ('K', 'degC')">
-        <title>lucy:LEISA_Instrument_Parameters/lucy:leisa_fpe_ir_temperature/lucy:leisa_fpe_ir_temperature</title>
+        <title>lucy:LEISA_Instrument_Parameters/lucy:leisa_fpa_temperature/lucy:leisa_fpa_temperature</title>
         The attribute @unit must be equal to one of the following values 'K', 'degC'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -40,6 +47,20 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:bias_level">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
+        <title>lucy:LLORRI_Instrument_Parameters/lucy:bias_level/lucy:bias_level</title>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:bias_offset">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
+        <title>lucy:LLORRI_Instrument_Parameters/lucy:bias_offset/lucy:bias_offset</title>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_1">
       <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_1/lucy:calibration_lamp_level_1</title>
@@ -50,6 +71,27 @@
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_2">
       <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_2/lucy:calibration_lamp_level_2</title>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:ccd_gain">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
+        <title>lucy:LLORRI_Instrument_Parameters/lucy:ccd_gain/lucy:ccd_gain</title>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:frame_transfer_scrub_time">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
+        <title>lucy:LLORRI_Instrument_Parameters/lucy:frame_transfer_scrub_time/lucy:frame_transfer_scrub_time</title>
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:read_noise">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
+        <title>lucy:LLORRI_Instrument_Parameters/lucy:read_noise/lucy:read_noise</title>
         The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -71,9 +113,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection">
-      <sch:assert test=". = ('EM 1', 'EM 2', 'ETU', 'FM 1', 'FM 2')">
+      <sch:assert test=". = ('EM1', 'EM2', 'ETU', 'FM1', 'FM2')">
         <title>lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection/lucy:board_selection</title>
-        The attribute lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection must be equal to one of the following values 'EM 1', 'EM 2', 'ETU', 'FM 1', 'FM 2'.</sch:assert>
+        The attribute lucy:LRalph_Instrument_Common_Parameters/lucy:board_selection must be equal to one of the following values 'EM1', 'EM2', 'ETU', 'FM1', 'FM2'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -148,9 +190,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:Lucy_Observation_Planning/lucy:mission_segment">
-      <sch:assert test=". = ('Cruise_1', 'EGA_1')">
+      <sch:assert test=". = ('CRUISE 1', 'CRUISE 2', 'CRUISE 3', 'DINKINESH', 'DONALDJOHANSON', 'EGA 1', 'EGA 2')">
         <title>lucy:Lucy_Observation_Planning/lucy:mission_segment/lucy:mission_segment</title>
-        The attribute lucy:Lucy_Observation_Planning/lucy:mission_segment must be equal to one of the following values 'Cruise_1', 'EGA_1'.</sch:assert>
+        The attribute lucy:Lucy_Observation_Planning/lucy:mission_segment must be equal to one of the following values 'CRUISE 1', 'CRUISE 2', 'CRUISE 3', 'DINKINESH', 'DONALDJOHANSON', 'EGA 1', 'EGA 2'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -189,6 +231,13 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="lucy:Lucy_Observation_Time_Information/lucy:observation_complete">
+      <sch:assert test=". = ('COMPLETE', 'INCOMPLETE', 'UNKNOWN')">
+        <title>lucy:Lucy_Observation_Time_Information/lucy:observation_complete/lucy:observation_complete</title>
+        The attribute lucy:Lucy_Observation_Time_Information/lucy:observation_complete must be equal to one of the following values 'COMPLETE', 'INCOMPLETE', 'UNKNOWN'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="lucy:Lucy_Observation_Time_Information/lucy:start_sclk">
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>lucy:Lucy_Observation_Time_Information/lucy:start_sclk/lucy:start_sclk</title>
@@ -221,6 +270,20 @@
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>lucy:MVIC_Instrument_Parameters/lucy:mvic_tdi_row_integration_time/lucy:mvic_tdi_row_integration_time</title>
         The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:Point_Source/lucy:units_of_conversion_constants">
+      <sch:assert test=". = ('(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)')">
+        <title>lucy:Point_Source/lucy:units_of_conversion_constants/lucy:units_of_conversion_constants</title>
+        The attribute lucy:Point_Source/lucy:units_of_conversion_constants must be equal to one of the following values '(DN/s)/(erg/cm^2/s/Angstrom)', '(DN/s/pixel)/(erg/cm^2/s/Angstrom/sr)'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="lucy:Radiometric_Conversion_Constants/lucy:pivot_wavelength">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>lucy:Radiometric_Conversion_Constants/lucy:pivot_wavelength/lucy:pivot_wavelength</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
