@@ -181,18 +181,6 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R ${{ env.DEPLOY_PATH }}
 
-      - name: Create predictably-located links
-        run: |
-          dev_path=$(dirname ${{ env.DEPLOY_PATH }})
-          mkdir -p $dev_path/latest
-          rm -rf $dev_path/latest/*
-          for im_ver_dir in ${{ env.DEPLOY_PATH }}/*; do
-            for ldd_file_path in $im_ver_dir/PDS4_*; do
-              ln -sr $ldd_file_path $dev_path/latest/$(basename $ldd_file_path)
-            done
-          done
-          ls -lR $dev_path/latest
-
       - name: If Release Branch, move to release dir
         shell: bash
         run: |
@@ -217,3 +205,4 @@ jobs:
           git add -A $(dirname ${{ env.DEPLOY_PATH }}) ${{ env.LOGS_PATH }} ${{github.workspace}}/build/release/
           git commit -m "Auto-generated LDDs by PDSEN CI Bot"
           git push origin HEAD
+
