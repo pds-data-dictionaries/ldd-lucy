@@ -658,29 +658,29 @@
     <local_identifier>lucy.LRalph_Instrument_Common_Parameters.playback_header_type</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>M. Katherine Crombie</submitter_name>
-    <definition>Playback header type</definition>
+    <definition>Defines what type of science data is being played from the Ralph instrument memory to the spacecraft.</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>LEISA_NONCDS</value>
-        <value_meaning>CDS is not used in the current LEISA observation (TBR)</value_meaning>
+        <value_meaning>Plays back the LEISA Non-CDS science data. This playback mode must be used for data taken using the LEISA Non-CDS observation type.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>LEISA_CDS</value>
-        <value_meaning>LEISA CDS mode is selected for the current observation (TBR)</value_meaning>
+        <value_meaning>Plays back the LEISA CDS science data without any further processing. This playback mode only works for data taken using the LEISA CDS observation type.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>LEISA_SUPER</value>
-        <value_meaning>The data were played back in LEISA super-pixel (2x2) mode</value_meaning>
+        <value_meaning>Sums the LEISA CDS data into 2x2 superpixels, then plays back the resulting data. This playback mode only works for data taken using the LEISA CDS observation type.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>MVIC</value>
-        <value_meaning>MVIC is selected for the current observation (TBR)</value_meaning>
+        <value_meaning>Plays back MVIC data. Individual channels may be eliminated from the playback by setting the TDI rows for that channel to zero.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>OTHER</value>
-        <value_meaning>Other values to be filled in. This is a placeholder.(TBR)</value_meaning>
+        <value_meaning>Some playback mode not among those listed.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
