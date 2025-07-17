@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.0.0 - Wed Oct 02 22:25:04 UTC 2024 -->
-  <!-- Generated from the PDS4 Information Model Version 1.20.0.0 - System Build 13.1 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.1.0 - Thu Jul 17 19:39:58 UTC 2025 -->
+  <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -48,37 +48,37 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:bias_level">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:bias_level/lucy:bias_level</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:bias_offset">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:bias_offset/lucy:bias_offset</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_1">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_1/lucy:calibration_lamp_level_1</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_2">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:calibration_lamp_level_2/lucy:calibration_lamp_level_2</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:ccd_gain">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:ccd_gain/lucy:ccd_gain</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -90,9 +90,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LLORRI_Instrument_Parameters/lucy:read_noise">
-      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel')">
+      <sch:assert test="@unit = ('DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel')">
         <title>lucy:LLORRI_Instrument_Parameters/lucy:read_noise/lucy:read_noise</title>
-        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'electrons', 'nm/mm', 'pixel'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'DN', 'W/m**2/sr/nm/(DN/s)', 'electron/DN', 'pixel'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -148,9 +148,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="lucy:LRalph_Instrument_Common_Parameters/lucy:playback_header_type">
-      <sch:assert test=". = ('LEISA_CDS', 'LEISA_NONCDS', 'MVIC', 'OTHER')">
+      <sch:assert test=". = ('LEISA_CDS', 'LEISA_NONCDS', 'LEISA_SUPER', 'MVIC', 'OTHER')">
         <title>lucy:LRalph_Instrument_Common_Parameters/lucy:playback_header_type/lucy:playback_header_type</title>
-        The attribute lucy:LRalph_Instrument_Common_Parameters/lucy:playback_header_type must be equal to one of the following values 'LEISA_CDS', 'LEISA_NONCDS', 'MVIC', 'OTHER'.</sch:assert>
+        The attribute lucy:LRalph_Instrument_Common_Parameters/lucy:playback_header_type must be equal to one of the following values 'LEISA_CDS', 'LEISA_NONCDS', 'LEISA_SUPER', 'MVIC', 'OTHER'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
