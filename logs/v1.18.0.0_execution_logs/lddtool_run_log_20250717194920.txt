@@ -1,12 +1,13 @@
 
->>  INFO LDDTOOL Version: 15.1.0
+>>  INFO LDDTOOL Version: 15.3.0
 >>  INFO IM Version Id: 1.18.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.24
->>  INFO Date: Wed Oct 02 22:25:07 UTC 2024
->>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
+>>  INFO Date: Thu Jul 17 19:49:21 UTC 2025
+>>  INFO PARENT_DIR: /tmp/lddtool-15.3.0/Data/
 
->>> INFO Init:  - Config.Properties Namespace Id Using:pds
+>>> INFO Init:  - Config.Properties Namespace Id Found:lucy
+>>> INFO Init:  - Config.Properties Namespace Id Using:lucy
 >>> INFO Init:  - LDD Dictionary_Type is Mission
 >>> INFO Attribute: <load_identifier> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <sap_identifier> - A 'nillable' attribute was found that is not a required attribute in at least one class.
@@ -30,10 +31,9 @@
 >>> INFO Attribute: <test_pattern_setting> - The default maximum value provided by the attribute's data type is being overridden with 2
 >>> INFO Attribute: <scan_row_pixels> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <pivot_wavelength> - The default minimum value provided by the attribute's data type is being overridden with 0.0
->>> WARNING Init:  - Config.Properties Namespace Id Not Found:lucy
 
  -- LDDTool Execution Summary --
-     1 warning(s)
+     0 warning(s)
      0 error(s)
      0 fatal error(s)
 
@@ -49,9 +49,9 @@ Input:
 
 Output:
 
-     - ./PDS4_LUCY_1I00_1000.xsd
-     - ./PDS4_LUCY_1I00_1000.sch
-     - ./PDS4_LUCY_1I00_1000.xml
-     - ./export/JSON/PDS4_PDS_1I00.JSON
+     - ./PDS4_LUCY_1I00_1010.xsd
+     - ./PDS4_LUCY_1I00_1010.sch
+     - ./PDS4_LUCY_1I00_1010.xml
+     - ./export/PDS4_PDS_1I00.JSON
 
 >>  INFO Exit(0)
