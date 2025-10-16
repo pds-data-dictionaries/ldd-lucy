@@ -849,7 +849,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>mce_start_postion</name>
+    <name>mce_start_position</name>
     <version_id>1.0</version_id>
     <local_identifier>lucy.LRalph_Instrument_Common_Parameters.mce_start_position</local_identifier>
     <nillable_flag>false</nillable_flag>
@@ -861,7 +861,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <DD_Attribute>
-    <name>mce_end_postion</name>
+    <name>mce_end_position</name>
     <version_id>1.0</version_id>
     <local_identifier>lucy.LRalph_Instrument_Common_Parameters.mce_end_position</local_identifier>
     <nillable_flag>false</nillable_flag>
