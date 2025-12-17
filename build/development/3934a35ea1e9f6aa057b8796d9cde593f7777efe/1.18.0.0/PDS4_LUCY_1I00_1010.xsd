@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<<< HEAD:build/development/c30d003e4fa29282e83fa3d8e068709dcc6746bf/1.18.0.0/PDS4_LUCY_1I00_1000.xsd
   <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.0.0 - Tue Jul 15 03:38:12 UTC 2025 -->
+========
+  <!-- PDS4 XML/Schema for Name Space Id:lucy  Version:1.0.1.0 - Thu Jul 17 19:49:21 UTC 2025 -->
+>>>>>>>> main:build/development/3934a35ea1e9f6aa057b8796d9cde593f7777efe/1.18.0.0/PDS4_LUCY_1I00_1010.xsd
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.18.0.0 - pds: - Common Dictionary                                       -->
-  <!-- 1.0.0.0 - lucy: - Lucy Mission LDD                                        -->
+  <!-- 1.0.1.0 - lucy: - Lucy Mission LDD                                        -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/mission/lucy/v1"
@@ -13,7 +17,7 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.0.0.0">
+    version="1.0.1.0">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd"/>
  
@@ -122,7 +126,7 @@ _TBD_Ingest_LDD
       <xs:element name="blocks_allocated" nillable="true" type="lucy:blocks_allocated" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
-    <!-- <xs:assert test="lucy:playback_header_type = ('LEISA_CDS', 'LEISA_NONCDS', 'MVIC', 'OTHER')"/> -->
+    <!-- <xs:assert test="lucy:playback_header_type = ('LEISA_CDS', 'LEISA_NONCDS', 'LEISA_SUPER', 'MVIC', 'OTHER')"/> -->
     <!-- <xs:assert test="lucy:board_selection = ('EM1', 'EM2', 'ETU', 'FM1', 'FM2')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
@@ -1302,7 +1306,9 @@ _TBD_Ingest_LDD
 
   <xs:simpleType name="playback_header_type">
     <xs:annotation>
-<xs:documentation>Playback header type</xs:documentation>
+      <xs:documentation>Defines what type of science data is being
+        played from the Ralph instrument memory to the
+        spacecraft.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
