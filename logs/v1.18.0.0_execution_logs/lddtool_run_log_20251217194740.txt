@@ -1,10 +1,10 @@
 
->>  INFO LDDTOOL Version: 15.3.0
->>  INFO IM Version Id: 1.20.0.0
+>>  INFO LDDTOOL Version: 16.0.0
+>>  INFO IM Version Id: 1.18.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.26
->>  INFO Date: Thu Oct 16 14:11:16 UTC 2025
->>  INFO PARENT_DIR: /tmp/lddtool-15.3.0/Data/
+>>  INFO IM Label Version Id: 1.24
+>>  INFO Date: Wed Dec 17 19:47:44 UTC 2025
+>>  INFO PARENT_DIR: /tmp/lddtool-16.0.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:lucy
 >>> INFO Init:  - Config.Properties Namespace Id Using:lucy
@@ -39,7 +39,7 @@
 
 Input:
 
-     - IM Version: 1K00
+     - IM Version: 1I00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -49,15 +49,9 @@ Input:
 
 Output:
 
-<<<<<<<< HEAD:logs/v1.20.0.0_execution_logs/lddtool_run_log_20250715033812.txt
-     - ./PDS4_LUCY_1K00_1000.xsd
-     - ./PDS4_LUCY_1K00_1000.sch
-     - ./PDS4_LUCY_1K00_1000.xml
-========
-     - ./PDS4_LUCY_1K00_1010.xsd
-     - ./PDS4_LUCY_1K00_1010.sch
-     - ./PDS4_LUCY_1K00_1010.xml
->>>>>>>> main:logs/v1.20.0.0_execution_logs/lddtool_run_log_20250717194918.txt
-     - ./export/PDS4_PDS_1K00.JSON
+     - ./PDS4_LUCY_1I00_1010.xsd
+     - ./PDS4_LUCY_1I00_1010.sch
+     - ./PDS4_LUCY_1I00_1010.xml
+     - ./export/PDS4_PDS_1I00.JSON
 
 >>  INFO Exit(0)
