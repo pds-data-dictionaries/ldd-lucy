@@ -3,16 +3,16 @@ PDS4 Local Data Dictionary Processing Report
 Configuration:
    LDDTool Version        16.0.0
    LDD Version Id:        1.0.1.0
-   LDD Label Version Id:  1.26
+   LDD Label Version Id:  1.24
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Dec 17 20:01:51 UTC 2025
-   Common Schema          [PDS4_PDS_1K00.xsd]
-   Common Schematron      [PDS4_PDS_1K00.sch]
-   IM Version Id:         1.20.0.0
+   Time                   Sat Dec 27 00:26:37 UTC 2025
+   Common Schema          [PDS4_PDS_1I00.xsd]
+   Common Schematron      [PDS4_PDS_1I00.sch]
+   IM Version Id:         1.18.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.26
+   IM Label Version Id:   1.24
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Glossary            [Glossary.pins]
@@ -50,82 +50,82 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   observation_id
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The Lucy Mission observation identifier. 
    minimum value          0
    maximum value          99999
 
    name                   observation_id_count
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The Lucy Mission observation identifier counter. This number increments by 1 with each planned observation sequence (L'LORRI only). 
    minimum value          0
    maximum value          99999
 
    name                   observation_complete
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The Lucy Mission observation completion status. 
 
    name                   observation_missing_packets
-   version                1.20
+   version                1.18
    value data type        ASCII_NonNegative_Integer
    description            The number of missing packets in the observation. The best data quality has no missing packets. 
 
    name                   start_sclk
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The Lucy spacecraft clock (SCLK) time (in seconds) at the start of the observation. 
    unit of measure type   Units_of_Time
 
    name                   mid_sclk
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The Lucy spacecraft clock (SCLK) time (in seconds) at the mid-time of the observation. 
    unit of measure type   Units_of_Time
 
    name                   stop_sclk
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The Lucy spacecraft clock (SCLK) time (in seconds) at the end of the observation. 
    unit of measure type   Units_of_Time
 
    name                   mid_utc
-   version                1.20
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The middle time of the observation in ISO UTC format "YYYY-MM-DDTHH:MM:SS.sss" 
 
    name                   mid_sclk_string
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The middle time of the observation in Lucy spacecraft clock string partition/SSSSSSSSSS-PPPPP, where S is seconds and P are ticks in units of 1/66535 of a second. 
 
    name                   mid_utc_doy
-   version                1.20
+   version                1.18
    value data type        ASCII_Date_Time_DOY_UTC
    description            The middle time of the observation in ISO DOY format, YYYY-DOYTHH:MM:SS.sss
 
    name                   mid_utc_jd
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The middle time of the observation in Julian day format.
    unit of measure type   Units_of_Time
 
    name                   mid_ephemeris_time
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The middle time of the observation in ephemeris time, seconds past J2000, TDB.
    unit of measure type   Units_of_Time
 
    name                   ccsds_sclk_time
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The Lucy spacecraft clock time of the CCSDS playback timestamp in seconds.
    unit of measure type   Units_of_Time
 
    name                   load_identifier
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The command sequence load identifier
    nillable               true
@@ -133,120 +133,120 @@ Parsed Input - Attributes:
    maximum value          99999
 
    name                   mission_segment
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Preserved
    description            The Lucy Mission segment
 
    name                   sap_identifier
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The Lucy Mission science activity plan identifier.
    nillable               true
 
    name                   visit_name
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The Lucy Mission trojan asteroid visit name.
    nillable               true
 
    name                   instrument_side
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The Lucy elctronics side.
 
    name                   llorri_status
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The status of the L'LORRI instrument.
 
    name                   lralph_status
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The status of the L'RALPH instrument.
 
    name                   ltes_status
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The status of the L'TES instrument.
 
    name                   ttcam_status
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The status of the TTCAM instrument.
 
    name                   target_fov_count
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The number of possible targets in FOV (SPICE-derived).
 
    name                   target_fov_name
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Preserved
    description            The name of the possible target in FOV (SPICE-derived).
 
    name                   internal_product_version_id
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The Lucy pipeline internal data processing version number. This number is likely to be grater than the PDS version number given in the version_id attribute in the Observation_Area.
 
    name                   attached_sync_marker_dec
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            Attached Sync Marker, decimal representation.
 
    name                   attached_sync_marker_hex
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Attached Sync Marker, hexidecimal representation.
 
    name                   latch_count
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The number of times a latchup has occurred.
    minimum value          0
 
    name                   calibration_lamp_level_1
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The Digital Number (DN) setting for calibration lamp one.
    unit of measure type   Units_of_Misc
 
    name                   calibration_lamp_level_2
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The Digital Number (DN) setting for calibration lamp two.
    unit of measure type   Units_of_Misc
 
    name                   bias_level
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The lucy:bias_level attribute appears in calibrated L'LORRI data products and contains the mean bias level of the detector's dark columns.
    minimum value          0
    unit of measure type   Units_of_Misc
 
    name                   read_noise
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The lucy:read_noise attribute appears in calibrated L'LORRI data products and provides the CCD read noise for the image.
    minimum value          0
    unit of measure type   Units_of_Misc
 
    name                   ccd_gain
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The lucy:ccd_gain attribute appears in calibrated L'LORRI data products and provides the CCD gain setting for the image.
    minimum value          0
    unit of measure type   Units_of_Misc
 
    name                   bias_offset
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The lucy:bias_offset attribute appears in calibrated L'LORRI data products and provides the CCD bias offset between the active and inactive regions of the detector.
    minimum value          0
    unit of measure type   Units_of_Misc
 
    name                   frame_transfer_scrub_time
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description             The lucy:frame_transfer_scrub_time attribute appears in calibrated L'LORRI data products and contains the instrument's frame transfer/scrub time. For the L'LORRI instrument, these two quantities (transfer and scrub times) are exactly equal. 
    minimum value          11.0
@@ -254,315 +254,315 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   playback_start
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            Playback science header timstamp of the first m4 packet used in spacecraft clock seconds.
    unit of measure type   Units_of_Time
 
    name                   playback_end
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            Playback science header timstamp of the last m4 packet used in spacecraft clock seconds.
    unit of measure type   Units_of_Time
 
    name                   playback_bad_pixel_mask_status
-   version                1.20
+   version                1.18
    value data type        ASCII_Boolean
    description            Status of the bad pixel map, true or false
 
    name                   playback_truncation_status
-   version                1.20
+   version                1.18
    value data type        ASCII_Boolean
    description            Status of the truncation enabled, true or false
 
    name                   playback_header_type
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Defines what type of science data is being played from the Ralph instrument memory to the spacecraft.
 
    name                   test_pattern_setting
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The instrument test pattern setting, 0 is science, 1 is test pattern.
    minimum value          0
    maximum value          2
 
    name                   hs_xtrack_start_row
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The cross track start row from the high speed header.
 
    name                   scan_row_pixels
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The number of pixels in the scan row.
    minimum value          1
 
    name                   fpecrc_error_flag
-   version                1.20
+   version                1.18
    value data type        ASCII_Boolean
    description            FPE checksum error flag, true or false
 
    name                   m4_calibration_state
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            Calibration state (TBR)
 
    name                   m4_blackbody_setting
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            Blackbody state (TBR)
 
    name                   m4_filament_setting
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            Filament setting (TBR)
 
    name                   fpe_drop_frames
-   version                1.20
+   version                1.18
    value data type        ASCII_NonNegative_Integer
    description            Number of FPE drop frames (TBR).
 
    name                   mce_scan_rate
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The MCE scan rate (TBR).
    unit of measure type   Units_of_Angular_Velocity
 
    name                   first_packet_timestamp
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The timestamp of the first packet recorded in spacraft clock seconds.
    unit of measure type   Units_of_Time
 
    name                   last_packet_timestamp
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The timestamp of the last packet recorded in spacraft clock seconds.
    unit of measure type   Units_of_Time
 
    name                   xsum_error_flag_status
-   version                1.20
+   version                1.18
    value data type        ASCII_Boolean
    description            Xsum flag indicating if there are errors in the stored data packet, true or false
 
    name                   lr_acquisition_start_block
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The L'Ralph observation acquisition start block address.
    nillable               true
 
    name                   mce_start_position
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The MCE start position (TBR), units TBD
 
    name                   mce_end_position
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The MCE start position (TBR), units TBD
 
    name                   board_selection
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The instrument side selected
 
    name                   blocks_allocated
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            The number of blocks allocated
    nillable               true
 
    name                   mvic_ccd_list
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            List of the MVIC CCDs used in this observation.
 
    name                   mvic_actual_atrack_summing
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            MVIC actual along track pixel summing.
 
    name                   mvic_actual_xtrack_summing
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            MVIC actual along track pixel summing.
 
    name                   mvic_planned_atrack_summing
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            MVIC actual summing mode.
 
    name                   mvic_planned_xtrack_summing
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            MVIC planned along track pixel summing.
 
    name                   mvic_summing_mode
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            MVIC planned summing mode.
 
    name                   actual_ccd1_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Actual CCD 1 TDI configuration.
 
    name                   actual_ccd2_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Actual CCD 2 TDI configuration.
 
    name                   actual_ccd3_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Actual CCD 3 TDI configuration.
 
    name                   actual_ccd4_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Actual CCD 4 TDI configuration.
 
    name                   actual_ccd5_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Actual CCD 5 TDI configuration.
 
    name                   actual_ccd6_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            Actual CCD 6 TDI configuration.
 
    name                   planned_ccd1_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The planned CCD 1 TDI configuration.
 
    name                   planned_ccd2_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The planned CCD 2 TDI configuration.
 
    name                   planned_ccd3_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The planned CCD 3 TDI configuration.
 
    name                   planned_ccd4_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The planned CCD 4 TDI configuration.
 
    name                   planned_ccd5_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The planned CCD 5 TDI configuration.
 
    name                   planned_ccd6_tdi_configuration
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The planned CCD 6 TDI configuration.
 
    name                   mvic_fpe_vis_temperature
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            The MVIC FPE VIS Temperature
    unit of measure type   Units_of_Temperature
 
    name                   mvic_observation_allocation
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            MVIC allocated observation duration
    unit of measure type   Units_of_Time
 
    name                   mvic_tdi_row_integration_time
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            MVIC allocated observation duration
    unit of measure type   Units_of_Time
 
    name                   leisa_mode
-   version                1.20
+   version                1.18
    value data type        ASCII_Boolean
    description            LEISA observation mode, T is CDS, F is NONCDS. (TBR)
 
    name                   leisa_observation_allocation
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            LEISA observation allocation duration.
    unit of measure type   Units_of_Time
 
    name                   leisa_integration_time
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            LEISA observation integration time (TBR)
    unit of measure type   Units_of_Time
 
    name                   leisa_atrack_start_channel
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            LEISA along track start channel
 
    name                   leisa_atrack_num_channels
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            LEISA along track number of channels.
 
    name                   leisa_xtrack_start_row
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            LEISA cross track start row.
 
    name                   leisa_xtrack_num_rows
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            LEISA cross track number of rows.
 
    name                   leisa_offset
-   version                1.20
+   version                1.18
    value data type        ASCII_Integer
    description            LEISA offset (TBR)
 
    name                   leisa_fpa_temperature
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description            LEISA Focal Plane Array Temperature
    unit of measure type   Units_of_Temperature
 
    name                   pivot_wavelength
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description             The value contained in the lucy:pivot_wavelength attribute is used when converting L'LORRI calibrated pixel values to physical units. 
    minimum value          0.0
    unit of measure type   Units_of_Length
 
    name                   solar_constant
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description             The lucy:solar_constant attribute supplies the constant to be used for sources with a spectral distribution similar to the Sun to convert calibrated pixel values to physical units. 
 
    name                   red_trojan_constant
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description             The lucy:red_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "red" Trojans to convert calibrated pixel values to physical units. 
 
    name                   gray_trojan_constant
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description             The lucy:gray_trojan_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of "gray" Trojans to convert calibrated pixel values to physical units. 
 
    name                   dinkinesh_constant
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description             The lucy:dinkinesh_constant attribute supplies the constant to be used for sources with a spectral distribution similar to that of Dinkinesh to convert calibrated pixel values to physical units. 
 
    name                   photometric_zero_point
-   version                1.20
+   version                1.18
    value data type        ASCII_Real
    description             The lucy:photometric_zero_point attribute supplies the photometric zero point to be used to convert between units of (ir)radiance and visual magnitude, V. 
 
    name                   units_of_conversion_constants
-   version                1.20
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description             For resolved sources, the radiometric conversion produces data in units of radiance. For unresolved sources, the conversion results in units of flux (irradiance). The lucy:units_of_conversion_constants attribute contains the appropriate physical units for the conversion constants in the class in which it is contained to produce either radiance or flux units, as appropriate, when the conversion is applied. 
 

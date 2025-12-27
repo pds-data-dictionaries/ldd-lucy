@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.1.0 - Wed Dec 17 20:01:46 UTC 2025 -->
+  <!-- PDS4 Schematron for Name Space Id:lucy  Version:1.0.1.0 - Sat Dec 27 00:26:37 UTC 2025 -->
   <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
